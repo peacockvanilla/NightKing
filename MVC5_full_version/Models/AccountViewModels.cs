@@ -48,6 +48,9 @@ namespace MVC5_full_version.Models
 
     public class LoginViewModel
     {
+        [Key]
+        public int ID { get; set; }
+
         [Required]
         [Display(Name = "Email")]
         [EmailAddress]

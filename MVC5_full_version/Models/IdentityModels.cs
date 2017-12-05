@@ -31,5 +31,7 @@ namespace MVC5_full_version.Models
         }
 
         public System.Data.Entity.DbSet<MVC5_full_version.Models.RegisterViewModel> RegisterViewModels { get; set; }
+
+        public System.Data.Entity.DbSet<MVC5_full_version.Models.LoginViewModel> LoginViewModels { get; set; }
     }
 }
