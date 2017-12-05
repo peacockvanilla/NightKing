@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace MVC5_full_version.Controllers
 {
+   [Authorize]
     public class FormsController : Controller
     {
         // GET: Forms

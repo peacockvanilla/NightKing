@@ -29,5 +29,7 @@ namespace MVC5_full_version.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<MVC5_full_version.Models.RegisterViewModel> RegisterViewModels { get; set; }
     }
 }
