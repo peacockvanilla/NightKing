@@ -52,7 +52,7 @@
                                 </h3>
                             </div>
                             <div class="panel-body">
-                                <p>Already a member? <a href="pages-login.html"><strong>Sign In</strong></a></p>
+                                <p>Already a member? @Html.ActionLink("Sign In", "Login", "Account") </p>
 
                                 @using (Html.BeginForm())
                                 {
@@ -120,14 +120,14 @@
 
                                         <div class="form-group">
                                             <div class="col-md-offset-2 col-md-10">
-                                                <input type="submit" value="Create" class="btn btn-default" />
+                                                <input type="submit" value="Register" class="btn btn-default" />
                                             </div>
                                         </div>
                                     </div>
                                 }
 
-                                <div>
+                                @*<div>
                                     @Html.ActionLink("Back to List", "Index")
-                                </div>
+                                </div>*@
     </body>
     </html>
