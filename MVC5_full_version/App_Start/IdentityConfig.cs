@@ -11,6 +11,9 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
 using MVC5_full_version.Models;
+using System.Net.Mail;
+using System.Net.Mime;
+using System.Configuration;
 
 namespace MVC5_full_version
 {
@@ -19,7 +22,52 @@ namespace MVC5_full_version
         public Task SendAsync(IdentityMessage message)
         {
             // Plug in your email service here to send an email.
-            return Task.FromResult(0);
+            // return Task.FromResult(0);
+            return Task.Factory.StartNew(() =>
+           {
+               sendMail(message);
+           });
+        }
+
+        void sendMail(IdentityMessage message)
+        {
+            //#region formatter
+            string text = string.Format("Please click on this link to {0}: {1}", message.Subject, message.Body);
+            string html = "Please confirm your account by clicking this link: <a href=\"" + message.Body + "\">link</a><br/>";
+
+            html += HttpUtility.HtmlEncode(@"Or click on the copy the following link on the browser:" + message.Body);
+            //#endregion
+
+            //MailMessage msg = new MailMessage();
+            //msg.From = new MailAddress(ConfigurationManager.AppSettings["Email"].ToString());
+            //msg.To.Add(new MailAddress(message.Destination));
+            //msg.Subject = message.Subject;
+            //msg.AlternateViews.Add(AlternateView.CreateAlternateViewFromString(text, null, MediaTypeNames.Text.Plain));
+            //msg.AlternateViews.Add(AlternateView.CreateAlternateViewFromString(html, null, MediaTypeNames.Text.Html));
+
+            //SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", Convert.ToInt32(587));
+
+            //System.Net.NetworkCredential credentials = new System.Net.NetworkCredential(ConfigurationManager.AppSettings["Email"].ToString(), ConfigurationManager.AppSettings["Email"].ToString());
+            //smtpClient.Credentials = credentials;
+            //smtpClient.EnableSsl = true;
+            //smtpClient.UseDefaultCredentials = false;
+            //smtpClient.Send(msg);
+
+            System.Net.Mail.MailMessage m = new System.Net.Mail.MailMessage(
+               new System.Net.Mail.MailAddress("randomemailaddress191@gmail.com", "Web Registration"),
+               new System.Net.Mail.MailAddress(message.Destination));
+            m.AlternateViews.Add(AlternateView.CreateAlternateViewFromString(text, null, MediaTypeNames.Text.Plain));
+            m.AlternateViews.Add(AlternateView.CreateAlternateViewFromString(html, null, MediaTypeNames.Text.Html));
+            m.Subject = "Email confirmation";
+         //   m.Body = string.Format("Dear {0}<BR/>Thank you for your registration, please click on the below link to comlete your registration: <a href=\"{1}\" title=\"User Email Confirm\">{1}</a>", message., Url.Action("ConfirmEmail", "Account", new { Token = user.Id, Email = user.Email }, Request.Url.Scheme));
+            m.IsBodyHtml = true;
+            System.Net.Mail.SmtpClient smtp = new System.Net.Mail.SmtpClient("smtp.gmail.com");
+            smtp.Credentials = new System.Net.NetworkCredential("randomemailaddress191@gmail.com", "@Bhaisahab143");
+            smtp.Port = 587;
+            smtp.EnableSsl = true;
+            smtp.Send(m);
+            //return RedirectToAction("ConfirmEmail", "Account", new { Email = user.Email });
+
         }
     }
 
