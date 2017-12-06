@@ -3482,7 +3482,7 @@ label.valid {
   color: #edce8c;
 }
 .theme-default #header {
-  background: #fff;
+    background: #fff;
 }
 .theme-default #header .logo,
 .theme-default #header button.sidebar-toggle,

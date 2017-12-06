@@ -395,7 +395,7 @@ namespace MVC5_full_version.Controllers
         public ActionResult LogOff()
         {
             AuthenticationManager.SignOut();
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("LogIn", "Account");
         }
 
         //

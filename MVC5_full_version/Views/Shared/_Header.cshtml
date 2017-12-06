@@ -1,9 +1,11 @@
-﻿<header id="header">
+﻿@using Microsoft.AspNet.Identity
+
+<header id="header">
     <!--logo start-->
     <div class="brand">
         <a href="index.html" class="logo">
             <i class="icon-layers"></i>
-            <span>NEU</span>BOARD
+            <span>STRU</span>CTURE
         </a>
     </div>
     <!--logo end-->
@@ -18,12 +20,12 @@
                 <i class="icon-user"></i>
             </button>
         </li>
-        <li class="hidden-xs hidden-sm">
+        @*<li class="hidden-xs hidden-sm">
             <input type="text" class="search" placeholder="Search project...">
             <button type="submit" class="btn btn-sm btn-search">
                 <i class="fa fa-search"></i>
             </button>
-        </li>
+        </li>*@
     </ul>
     <ul class="nav navbar-nav navbar-right">
         <li class="dropdown profile hidden-xs">
@@ -32,7 +34,10 @@
                     <span class="avatar">
                         <img src="~/Images/profile.jpg" class="img-circle" alt="">
                     </span>
-                    <span class="text">Mike Adams</span>
+                    @*<span class="text">Mike Adams</span>
+                        
+                    *@
+                   
                     <span class="caret"></span>
                 </span>
             </a>
@@ -85,10 +90,34 @@
                 <i class="fa fa-expand"></i>
             </button>
         </li>
-        <li class="toggle-navigation toggle-right">
+        @*<li class="toggle-navigation toggle-right">
             <button class="sidebar-toggle" id="toggle-right">
                 <i class="fa fa-indent"></i>
             </button>
-        </li>
+        </li>*@
     </ul>
+    @if (Request.IsAuthenticated)
+    {
+        using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+        {
+            @Html.AntiForgeryToken()
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+                </li>
+                <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+            </ul>
+        }
+    }
+    else
+    {
+        <ul class="nav navbar-nav navbar-right">
+            <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+            <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+        </ul>
+    }
+
 </header>
+
+}
