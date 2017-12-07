@@ -1,5 +1,6 @@
 ﻿@model MVC5_full_version.Models.RegisterViewModel
-
+    
+@using reCAPTCHA.MVC
 @{
     Layout = null;
 }
@@ -28,6 +29,15 @@
     <!--[if lt IE 9]>
      @Scripts.Render("~/bundles/ie")
      <![endif]-->
+    <script>
+var verifyCallback = function (response) {
+    alert("grecaptcha is ready!");
+};
+
+var expiredCallback = function () {
+    alert("grecaptcha is expired!");
+};
+    </script>
 
 </head>
 
@@ -115,6 +125,17 @@
                                             <div class="col-md-10">
                                                 @Html.EditorFor(model => model.ReferalCode, new { htmlAttributes = new { @class = "form-control" } })
                                                 @Html.ValidationMessageFor(model => model.ReferalCode, "", new { @class = "text-danger" })
+                                            </div>
+                                        </div>
+
+                                        @Html.Recaptcha(publicKey: "6Ldk9TsUAAAAAJ8EnHDu0VNR6lbJxU6ss_fVhUyf", theme: CaptchaTheme.Dark, type: CaptchaType.Image,
+            callback: "verifyCallback", expiredCallback: "expiredCallback")
+
+                                        <div class="form-group">
+                                            
+                                            <div class="col-md-10">
+                                                @Html.Recaptcha()
+                                                @Html.ValidationMessage("ReCaptcha")
                                             </div>
                                         </div>
 

@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using MVC5_full_version.Models;
+using reCAPTCHA.MVC;
 
 namespace MVC5_full_version.Controllers
 {
@@ -160,7 +161,11 @@ namespace MVC5_full_version.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Register(RegisterViewModel model)
+        [CaptchaValidator(
+        PrivateKey = "6Ldk9TsUAAAAAJhC2DG4FR7oFAngfqZXCKezBvJI",
+        ErrorMessage = "Invalid input captcha.",
+        RequiredMessage = "The captcha field is required.")]
+        public async Task<ActionResult> Register(RegisterViewModel model, bool captchaValid)
         {
             if (ModelState.IsValid)
             {
