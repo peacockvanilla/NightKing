@@ -88,7 +88,16 @@ namespace MVC5_full_version.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
-                    return RedirectToLocal(returnUrl);
+                    var userid = UserManager.FindByEmail(model.Email).Id;
+                    if (!UserManager.IsEmailConfirmed(userid))
+                    {
+                        var autheticationManager = HttpContext.GetOwinContext().Authentication;
+                        autheticationManager.SignOut();
+
+                        return View("EmailNotVerified");
+                    }
+                    else
+                        return RedirectToLocal(returnUrl);
                 case SignInStatus.LockedOut:
                     return View("Lockout");
                 case SignInStatus.RequiresVerification:
@@ -99,6 +108,30 @@ namespace MVC5_full_version.Controllers
                     return View(model);
             }
         }
+
+        //MJ-S
+        // GET: /Account/SilentLogOff
+        [HttpGet]
+        [Authorize]
+        public ActionResult SilentLogOff()
+        {
+            // Sign out and redirect to Login
+            AuthenticationManager.SignOut();
+            return RedirectToAction("Login");
+        }
+
+        // GET: /Account/DisplayEmail
+        [HttpGet]
+        [Authorize]
+        public ActionResult DisplayEmail()
+        {
+            // Sign out and show DisplayEmail view
+            AuthenticationManager.SignOut();
+            return View();
+        }
+        //MJ-E
+
+
 
         //
         // GET: /Account/VerifyCode
@@ -174,20 +207,6 @@ namespace MVC5_full_version.Controllers
                 if (result.Succeeded)
                 {
 
-
-                    //System.Net.Mail.MailMessage m = new System.Net.Mail.MailMessage(
-                    //   new System.Net.Mail.MailAddress("randomemailaddress191@gmail.com", "Web Registration"),
-                    //   new System.Net.Mail.MailAddress(user.Email));
-                    //m.Subject = "Email confirmation";
-                    //m.Body = string.Format("Dear {0}<BR/>Thank you for your registration, please click on the below link to comlete your registration: <a href=\"{1}\" title=\"User Email Confirm\">{1}</a>", user.UserName, Url.Action("ConfirmEmail", "Account", new { Token = user.Id, Email = user.Email }, Request.Url.Scheme));
-                    //m.IsBodyHtml = true;
-                    //System.Net.Mail.SmtpClient smtp = new System.Net.Mail.SmtpClient("smtp.sendgrid.net");
-                    //smtp.Credentials = new System.Net.NetworkCredential("apikey", "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");
-                    //smtp.Port = 465;
-                    //smtp.EnableSsl = true;
-                    //smtp.Send(m);
-                    //return RedirectToAction("ConfirmEmail", "Account", new { Email = user.Email });
-
                     await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
 
                     // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
@@ -196,7 +215,7 @@ namespace MVC5_full_version.Controllers
                     var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                     await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
 
-                    return RedirectToAction("Index", "Dashboard");
+                    return RedirectToAction("DisplayEmail", "Account", new object { });
                 }
                 AddErrors(result);
             }
