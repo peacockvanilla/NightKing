@@ -73,40 +73,19 @@
               
             </li>
             <li class="nav-dropdown @Html.IsSelected(controller: "Charts")">
-                <a href="#" title="Charts">
+                <a href="@Url.Action("Index","Network")" title="Charts">
                     <i class="fa  fa-fw fa-bar-chart-o"></i> Network
                 </a>
-                <ul class="nav-sub">
-                    <li class="@Html.IsSelected(action: "Chartjs")">
-                        <a href="@Url.Action("Chartjs", "Charts")">
-                            Chartjs
-                        </a>
-                    </li>
-                    <li class="@Html.IsSelected(action: "CS3Charts")">
-                        <a href="@Url.Action("CS3Charts", "Charts")">
-                            C3 Charts
-                        </a>
-                    </li>
-                    <li class="@Html.IsSelected(action: "MorrisJS")">
-                        <a href="@Url.Action("MorrisJS", "Charts")">
-                            Morris.js Charts
-                        </a>
-                    </li>
-                    <li class="@Html.IsSelected(action: "Sparkline")">
-                        <a href="@Url.Action("Sparkline", "Charts")">
-                            Sparkline Charts
-                        </a>
-                    </li>
-                </ul>
+               
             </li>
             <li>
-                <a href="#" title="Frontend">
+                <a href="@Url.Action("Index","Security")" title="Frontend">
                     <i class="fa  fa-fw fa-desktop"></i> Security
                     <span class="pull-right badge badge-danger">new</span>
                 </a>
             </li>
             <li class="nav-dropdown @Html.IsSelected(controller: "Mail")">
-                <a href="#" title="Mail">
+                <a href="@Url.Action("Index","Wallet")" title="Mail">
                     <i class="fa fa-fw fa-envelope-o"></i> Wallet
                     <span class="label label-primary label-circle pull-right">8</span>
                 </a>
@@ -124,28 +103,12 @@
                 </ul>
             </li>
             <li class="nav-dropdown @Html.IsSelected(controller: "Maps")">
-                <a href="#" title="Maps">
+                <a href="@Url.Action("Index","Profile")" title="Maps">
                     <i class="fa  fa-fw fa-map-marker"></i> Profile
                 </a>
-                <ul class="nav-sub">
-                    <li class="@Html.IsSelected(action: "GoogleMaps")">
-                        <a href="@Url.Action("GoogleMaps", "Maps")">
-                            Google Maps
-                        </a>
-                    </li>
-                    <li class="@Html.IsSelected(action: "VectorMaps")">
-                        <a href="@Url.Action("VectorMaps", "Maps")">
-                            Vector Maps
-                        </a>
-                    </li>
-                </ul>
+              
             </li>
-            <li>
-                <a href="http://authenticgoods.co/wrapbootstrap/themes/neuboard-v1.2/Frontend/" title="Frontend">
-                    <i class="fa  fa-fw fa-desktop"></i> Security
-                    
-                </a>
-            </li>
+           
             <li class="nav-dropdown @Html.IsSelected(controller: "Pages")">
                 <a href="#" title="Pages">
                     <i class="fa  fa-fw fa-file-text"></i> Support
