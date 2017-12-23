@@ -103,6 +103,10 @@ namespace MVC5_full_version.Models
         
         [Display(Name = "Referal Code")]
         public string ReferalCode { get; set; }
+
+        [Display(Name = "Terms and Conditions")]
+        [Range(typeof(bool), "true", "true", ErrorMessage = "You gotta tick the box!")]
+        public bool TermsAndConditions { get; set; }
     }
 
     public class ResetPasswordViewModel

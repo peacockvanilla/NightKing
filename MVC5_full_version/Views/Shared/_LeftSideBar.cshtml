@@ -61,46 +61,16 @@
                 </a>
             </li>
                        <li class="nav-dropdown @Html.IsSelected(controller: "Forms")">
-                <a href="#" title="Forms">
+                <a href="@Url.Action("Index", "ICO")" title="Forms">
                     <i class="fa  fa-fw fa-edit"></i> ICO
                 </a>
-                <ul class="nav-sub">
-                    <li class="@Html.IsSelected(action: "Components")">
-                        <a href="@Url.Action("Components", "Forms")">Components</a>
-                    </li>
-                    <li class="@Html.IsSelected(action: "Validation")">
-                        <a href="@Url.Action("Validation", "Forms")">Validation</a>
-                    </li>
-                    <li class="@Html.IsSelected(action: "Mask")">
-                        <a href="@Url.Action("Mask", "Forms")">Mask</a>
-                    </li>
-                    <li class="@Html.IsSelected(action: "Wizard")">
-                        <a href="@Url.Action("Wizard", "Forms")">Wizard</a>
-                    </li>
-                    <li class="@Html.IsSelected(action: "MultipleFileUpload")">
-                        <a href="@Url.Action("MultipleFileUpload", "Forms")">Multiple File Upload</a>
-                    </li>
-                    <li class="@Html.IsSelected(action: "WYSIWYGEditor")">
-                        <a href="@Url.Action("WYSIWYGEditor", "Forms")">WYSIWYG Editor</a>
-                    </li>
-                </ul>
+               
             </li>
             <li class="nav-dropdown @Html.IsSelected(controller: "Tables")">
-                <a href="#" title="Tables">
+                <a href="@Url.Action("Index","STRUExchange")" title="Tables">
                     <i class="fa  fa-fw fa-th-list"></i> STRU Exchange
                 </a>
-                <ul class="nav-sub">
-                    <li class="@Html.IsSelected(action: "BasicTables")">
-                        <a href="@Url.Action("BasicTables", "Tables")">
-                            Basic Tables
-                        </a>
-                    </li>
-                    <li class="@Html.IsSelected(action: "DataTables")">
-                        <a href="@Url.Action("DataTables", "Tables")">
-                            Data Tables
-                        </a>
-                    </li>
-                </ul>
+              
             </li>
             <li class="nav-dropdown @Html.IsSelected(controller: "Charts")">
                 <a href="#" title="Charts">
@@ -130,7 +100,7 @@
                 </ul>
             </li>
             <li>
-                <a href="http://authenticgoods.co/wrapbootstrap/themes/neuboard-v1.2/Frontend/" title="Frontend">
+                <a href="#" title="Frontend">
                     <i class="fa  fa-fw fa-desktop"></i> Security
                     <span class="pull-right badge badge-danger">new</span>
                 </a>

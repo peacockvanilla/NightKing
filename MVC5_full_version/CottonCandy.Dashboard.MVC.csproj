@@ -167,21 +167,19 @@
     <Compile Include="Controllers\CSSAnimationsController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\FormsController.cs" />
+    <Compile Include="Controllers\ICOController.cs" />
     <Compile Include="Controllers\MailController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MapsController.cs" />
     <Compile Include="Controllers\PagesController.cs" />
     <Compile Include="Controllers\SampleController.cs" />
+    <Compile Include="Controllers\STRUExchangeController.cs" />
     <Compile Include="Controllers\TablesController.cs" />
     <Compile Include="Controllers\UIElementsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\HTMLHelpers.cs" />
-    <Compile Include="Migrations\201712050219318_InitialCreate.cs" />
-    <Compile Include="Migrations\201712050219318_InitialCreate.Designer.cs">
-      <DependentUpon>201712050219318_InitialCreate.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -223,6 +221,13 @@
     <Content Include="Images\ror.png" />
     <Content Include="Images\spritemap%402x.png" />
     <Content Include="Images\spritemap.png" />
+    <Content Include="Images\Stru\25px.jpg" />
+    <Content Include="Images\Stru\25px.png" />
+    <Content Include="Images\Stru\40px.jpg" />
+    <Content Include="Images\Stru\40px.png" />
+    <Content Include="Images\Stru\55px.png" />
+    <Content Include="Images\Stru\eth.png" />
+    <Content Include="Images\Stru\Slide1.png" />
     <Content Include="Images\vac-1.jpg" />
     <Content Include="Images\vac-2.jpg" />
     <Content Include="Images\vac-3.jpg" />
@@ -439,6 +444,8 @@
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Account\DisplayEmail.cshtml" />
+    <Content Include="Views\ICO\Index.cshtml" />
+    <Content Include="Views\STRUExchange\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -480,11 +487,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201712050219318_InitialCreate.resx">
-      <DependentUpon>201712050219318_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

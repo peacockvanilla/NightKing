@@ -1,0 +1,91 @@
+﻿@{
+    ViewBag.Title = "ICO";
+}
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        
+    });
+
+    function getEthervalue() {
+       if(('#buyAmount') != "")
+        {
+            $.ajax({
+                type: 'GET',
+                url: 'https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=BTC,USD',
+                dataType: 'json',
+                success: function (response) {
+                    console.log(response);
+                    //alert('done');
+                    var ethrateinUSD = response["USD"];
+                    console.log(ethrateinUSD);
+
+                    //convert to stru token
+                    var a = $('#buyAmount').val();
+                    console.log(a);
+                    var pI = parseInt(a);
+                    var amttoSend = .30 * pI;
+                    console.log(amttoSend);
+
+                    var finalAmt = amttoSend / ethrateinUSD;
+                    console.log(finalAmt);
+                    $("#ethValue").val(finalAmt);// = finalAmt;
+
+                }
+            });
+
+       }
+    }
+</script>
+
+<div class="pageheader">
+    <h1>ICO</h1>
+    <div class="breadcrumb-wrapper hidden-xs">
+        <span class="label">You are here:</span>
+        <ol class="breadcrumb">
+            <li>
+                <a href="index.html">Dashboard</a>
+            </li>
+            <li>ICO</li>
+            <li class="active">ICO</li>
+        </ol>
+    </div>
+</div>
+<section id="main-content" class="animated fadeInUp">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Buy STRUcture Token</h3>
+                    @*<div class="actions pull-right">
+                        <i class="fa fa-expand"></i>
+                        <i class="fa fa-chevron-down"></i>
+                        <i class="fa fa-times"></i>
+                    </div>*@
+                </div>
+                <div class="panel-body">
+                    <form class="form-horizontal form-border">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Amount</label>
+                            <div class="col-sm-6">
+                                <input type="text" id="buyAmount" class="form-control" placeholder="Tokens in number" onblur="return getEthervalue();">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label"></label>
+                            <div class="col-sm-6">
+                                <p>Please send this</p> <p id="ethValue"></p>
+                            </div>
+                        </div>
+                      
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
