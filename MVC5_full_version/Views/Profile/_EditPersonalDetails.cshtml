@@ -1,0 +1,68 @@
+﻿@using MVC5_full_version.Models
+@model MVC5_full_version.Models.Profile.EditPersonalDetailsViewModel
+<script src="~/Scripts/jquery-1.11.1.min.js"></script>
+<script>
+   
+    $('#btnEditProfile').click(function () {
+        var data = {
+            FirstName: $('#FirstName').val(),
+            LastName: $('#LastName').val(),
+            Username: $('#Username').val(),
+            Email:$('#Email').val()
+        };
+
+        $.ajax({
+            type: 'POST',
+            url: '/Profile/UpdateUserInfo',
+            data: JSON.stringify(data),
+            contentType: "application/json; charset=utf-8",
+            success: function () {
+
+            },
+            error: function () {
+                alert('error');
+            }
+        });
+
+    });
+
+</script>
+
+
+
+
+    @Html.AntiForgeryToken()
+
+    <hr />
+    @Html.ValidationSummary("", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(m => m.FirstName, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.PasswordFor(m => m.FirstName, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.LastName, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.PasswordFor(m => m.LastName, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Username, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.PasswordFor(m => m.Username, new { @class = "form-control", @disabled = "disabled" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.EmailAddress, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.PasswordFor(m => m.EmailAddress, new { @class = "form-control", @disabled = "disabled" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" id="btnEditProfile" value="Update Profile" class="btn btn-default" />
+        </div>
+    </div>
+

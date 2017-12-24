@@ -13,10 +13,7 @@ namespace MVC5_full_version.Controllers
         {
             return View();
         }
-        public ActionResult Profile()
-        {
-            return View();
-        }
+       
         public ActionResult SignIn()
         {
             return View();
