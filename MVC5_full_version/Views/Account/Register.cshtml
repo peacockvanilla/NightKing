@@ -21,7 +21,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
-    
+
+    <script src="~/Scripts/jquery-1.11.1.min.js"></script>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
@@ -36,7 +37,18 @@ var verifyCallback = function (response) {
 
 var expiredCallback = function () {
   //  alert("grecaptcha is expired!");
-};
+        };
+
+        
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var refExist = $("#ReferalCode").val();
+            console.log(refExist);
+            if (refExist != null) {
+                $("#ReferalCode").css("disabled", "disabled");
+            }
+        });
     </script>
 
 </head>
@@ -120,11 +132,11 @@ var expiredCallback = function () {
                                                 @Html.ValidationMessageFor(model => model.ConfirmPassword, "", new { @class = "text-danger" })
                                             </div>
                                         </div>
-                                       
+                                     
                                         <div class="form-group">
                                             @Html.LabelFor(model => model.ReferalCode, htmlAttributes: new { @class = "control-label col-md-3" })
                                             <div class="col-md-9">
-                                                @Html.EditorFor(model => model.ReferalCode, new { htmlAttributes = new { @class = "form-control", placeholder = "Optional" } })
+                                                @Html.EditorFor(model => model.ReferalCode, new { htmlAttributes = new { @class = "form-control", placeholder = "Optional"  } })
                                                 @Html.ValidationMessageFor(model => model.ReferalCode, "", new { @class = "text-danger" })
                                                 <br />
                                                 @Html.Recaptcha()

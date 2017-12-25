@@ -188,9 +188,22 @@ namespace MVC5_full_version.Controllers
         //
         // GET: /Account/Register
         [AllowAnonymous]
-        public ActionResult Register()
+        public ActionResult Register(string refCode)
         {
-            return View();
+            if(refCode != null) {
+
+                var objrefCode = new Models.RegisterViewModel()
+                {
+                    ReferalCode = refCode
+                };
+                return View(objrefCode);
+            }
+            else
+            {
+                return View();
+            }
+
+            
         }
 
         //
@@ -206,7 +219,7 @@ namespace MVC5_full_version.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Username, Email = model.Email };
+                var user = new ApplicationUser { UserName = model.Username, Email = model.Email, ReferalCode = model.ReferalCode };
                 model.CreatedDate = DateTime.Now;
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)

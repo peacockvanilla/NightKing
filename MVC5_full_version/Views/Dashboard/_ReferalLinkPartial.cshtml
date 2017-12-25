@@ -19,7 +19,7 @@ function myFunction() {
                 <div class="col-md-4"><p>Refer Friends and Earn Bonus</p></div>
                 <div class="col-md-8">
                     
-                    <input type="text" id="txtReferal" value="http://localhost:61272/Account/Register/ @User.Identity.GetUserName() "/>
+                    <input type="text" id="txtReferal" value="http://localhost:61272/Account/Register?refCode=@User.Identity.GetUserName() "/>
                     <input type="button" value="Copy" onclick="myFunction();"/>
                 </div>
                 

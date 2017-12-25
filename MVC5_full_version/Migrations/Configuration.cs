@@ -10,7 +10,6 @@ namespace MVC5_full_version.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
-            ContextKey = "MVC5_full_version.Models.ApplicationDbContext";
         }
 
         protected override void Seed(MVC5_full_version.Models.ApplicationDbContext context)

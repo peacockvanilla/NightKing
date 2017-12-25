@@ -185,6 +185,10 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\HTMLHelpers.cs" />
+    <Compile Include="Migrations\201712250530273_UpdateTable.cs" />
+    <Compile Include="Migrations\201712250530273_UpdateTable.Designer.cs">
+      <DependentUpon>201712250530273_UpdateTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -510,6 +514,11 @@
       <Project>{a9498699-a3d7-40b1-a5c1-3acc8e9d3c70}</Project>
       <Name>CottonCandy.DLL</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201712250530273_UpdateTable.resx">
+      <DependentUpon>201712250530273_UpdateTable.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
