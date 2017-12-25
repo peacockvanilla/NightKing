@@ -29,7 +29,7 @@
 </script>
 
 
-
+@using (Html.BeginForm()) { 
 
     @Html.AntiForgeryToken()
 
@@ -66,3 +66,4 @@
         </div>
     </div>
 
+}

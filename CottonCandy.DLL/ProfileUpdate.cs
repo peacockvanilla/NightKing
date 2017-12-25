@@ -19,5 +19,25 @@ namespace CottonCandy.DLL
 
             }
         }
+        private static DashBoardClientBetaEntities db = new DashBoardClientBetaEntities();
+       public static bool CheckForEmail(string email)
+        {
+            // bool isExist = db.AspNetUsers.Where(x => x.Email.ToLowerInvariant().Equals(email.ToLowerInvariant())) != null;
+            var abc = (from users in db.AspNetUsers
+                      where users.Email.ToLower() == email.ToLower()
+                      select users.Id).FirstOrDefault();
+
+            return abc != null ? true : false;
+           // return isExist;
+        }
+
+        public static bool CheckForUsername(string username)
+        {
+            var abc = (from users in db.AspNetUsers
+                       where users.UserName.ToLower() == username.ToLower()
+                       select users.Id).FirstOrDefault();
+
+            return abc != null ? true : false;
+        }
     }
 }

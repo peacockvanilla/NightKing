@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Web.Mvc;
 
 namespace MVC5_full_version.Models
 {
@@ -51,10 +53,12 @@ namespace MVC5_full_version.Models
         [Key]
         public int ID { get; set; }
 
+        
+        public string Email { get; } //set; }
+
         [Required]
-        [Display(Name = "Email")]
-        [EmailAddress]
-        public string Email { get; set; }
+        [Display(Name = "Username")]
+        public string Username { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
@@ -82,10 +86,12 @@ namespace MVC5_full_version.Models
 
         [Required]
         [EmailAddress]
+        [Remote("IsEmailExists", "Validation", HttpMethod = "POST", ErrorMessage = "Email address already registered.")]
         [Display(Name = "Email")]
         public string Email { get; set; }
 
         [Required]
+        [Remote("IsUsernameExists", "Validation", HttpMethod = "POST", ErrorMessage = "User name already registered.")]
         [Display(Name = "Username")]
         public string Username { get; set; }
 
@@ -97,16 +103,17 @@ namespace MVC5_full_version.Models
 
         [DataType(DataType.Password)]
         [Display(Name = "Confirm password")]
-        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+        [System.ComponentModel.DataAnnotations.Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
 
         
         [Display(Name = "Referal Code")]
         public string ReferalCode { get; set; }
 
-        [Display(Name = "Terms and Conditions")]
-        [Range(typeof(bool), "true", "true", ErrorMessage = "You gotta tick the box!")]
-        public bool TermsAndConditions { get; set; }
+       
+
+        public DateTime CreatedDate { get; set; }
+        
     }
 
     public class ResetPasswordViewModel
@@ -126,7 +133,7 @@ namespace MVC5_full_version.Models
 
         [DataType(DataType.Password)]
         [Display(Name = "Confirm password")]
-        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+        [System.ComponentModel.DataAnnotations.Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
 
         public string Code { get; set; }

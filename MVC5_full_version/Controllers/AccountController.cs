@@ -10,6 +10,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using MVC5_full_version.Models;
 using reCAPTCHA.MVC;
+using CottonCandy.DLL;
 
 namespace MVC5_full_version.Controllers
 {
@@ -74,7 +75,7 @@ namespace MVC5_full_version.Controllers
 
 
             if (ModelState.IsValid) {
-                var user = await UserManager.FindByNameAsync(model.Email);
+                var user = await UserManager.FindByNameAsync(model.Username);
                 //Add this to check if the email was confirmed.
                 if (!await UserManager.IsEmailConfirmedAsync(user.Id))
                 {
@@ -84,11 +85,11 @@ namespace MVC5_full_version.Controllers
             }
             // This doesn't count login failures towards account lockout
             // To enable password failures to trigger account lockout, change to shouldLockout: true
-            var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
+            var result = await SignInManager.PasswordSignInAsync(model.Username, model.Password, model.RememberMe, shouldLockout: false);
             switch (result)
             {
                 case SignInStatus.Success:
-                    var userid = UserManager.FindByEmail(model.Email).Id;
+                    var userid = UserManager.FindByName(model.Username).Id;
                     if (!UserManager.IsEmailConfirmed(userid))
                     {
                         var autheticationManager = HttpContext.GetOwinContext().Authentication;
@@ -129,6 +130,9 @@ namespace MVC5_full_version.Controllers
             AuthenticationManager.SignOut();
             return View();
         }
+
+
+       
         //MJ-E
 
 
@@ -198,11 +202,12 @@ namespace MVC5_full_version.Controllers
         PrivateKey = "6Ldk9TsUAAAAAJhC2DG4FR7oFAngfqZXCKezBvJI",
         ErrorMessage = "Invalid input captcha.",
         RequiredMessage = "The captcha field is required.")]
-        public async Task<ActionResult> Register(RegisterViewModel model, bool captchaValid)
+        public async Task<ActionResult> Register(Models.RegisterViewModel model, bool captchaValid)
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new ApplicationUser { UserName = model.Username, Email = model.Email };
+                model.CreatedDate = DateTime.Now;
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
