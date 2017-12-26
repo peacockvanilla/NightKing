@@ -264,6 +264,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery-1.11.1.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -458,13 +460,15 @@
     <Content Include="Views\Account\DisplayEmail.cshtml" />
     <Content Include="Views\ICO\Index.cshtml" />
     <Content Include="Views\STRUExchange\Index.cshtml" />
-    <Content Include="Views\Network\Index.cshtml" />
     <Content Include="Views\Security\Index.cshtml" />
     <Content Include="Views\Wallet\Index.cshtml" />
     <Content Include="Views\Profile\Index.cshtml" />
     <Content Include="Views\Profile\_EditPersonalDetails.cshtml" />
     <Content Include="Views\Profile\_UpdateProfilePicture.cshtml" />
     <Content Include="Views\Dashboard\_ReferalLinkPartial.cshtml" />
+    <Content Include="Views\Network\Index.cshtml" />
+    <Content Include="Views\Network\Main.cshtml" />
+    <Content Include="Views\Network\_ReferalLinksViewPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

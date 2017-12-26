@@ -12,16 +12,11 @@ namespace CottonCandy.DLL
     using System;
     using System.Collections.Generic;
     
-    public partial class RegisterViewModel
+    public partial class LoginViewModel
     {
         public int ID { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Email { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
-        public string ConfirmPassword { get; set; }
-        public string ReferalCode { get; set; }
-        public System.DateTime CreatedDate { get; set; }
+        public bool RememberMe { get; set; }
     }
 }

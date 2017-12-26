@@ -1,4 +1,5 @@
-﻿<!--sidebar left start-->
+﻿@using Microsoft.AspNet.Identity
+<!--sidebar left start-->
 <aside class="sidebar sidebar-left">
     <div class="sidebar-profile">
         <div class="avatar">
@@ -72,12 +73,19 @@
                 </a>
               
             </li>
-            <li class="nav-dropdown @Html.IsSelected(controller: "Charts")">
-                <a href="@Url.Action("Index","Network")" title="Charts">
+            @*<li class="nav-dropdown @Html.IsSelected(controller: "Charts")">
+                <a href="@Html.ActionLink("Network","Index",new { refCode = @User.Identity.GetUserName() })" title="Charts">
                     <i class="fa  fa-fw fa-bar-chart-o"></i> Network
                 </a>
                
+            </li>*@
+            <li class="nav-dropdown @Html.IsSelected(controller: "Network")">
+                <a href="@Url.Action("Main", "Network")" title="Charts">
+                    <i class="fa  fa-fw fa-bar-chart-o"></i> Network
+                </a>
+
             </li>
+
             <li>
                 <a href="@Url.Action("Index","Security")" title="Frontend">
                     <i class="fa  fa-fw fa-desktop"></i> Security

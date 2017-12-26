@@ -13,10 +13,10 @@ namespace CottonCandy.DLL
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DashBoardClientBetaEntities : DbContext
+    public partial class StructDatabaseDevEntities : DbContext
     {
-        public DashBoardClientBetaEntities()
-            : base("name=DashBoardClientBetaEntities")
+        public StructDatabaseDevEntities()
+            : base("name=StructDatabaseDevEntities")
         {
         }
     
@@ -30,6 +30,9 @@ namespace CottonCandy.DLL
         public virtual DbSet<AspNetUserClaim> AspNetUserClaims { get; set; }
         public virtual DbSet<AspNetUserLogin> AspNetUserLogins { get; set; }
         public virtual DbSet<AspNetUser> AspNetUsers { get; set; }
+        public virtual DbSet<LoginViewModel> LoginViewModels { get; set; }
         public virtual DbSet<RegisterViewModel> RegisterViewModels { get; set; }
+
+        public System.Data.Entity.DbSet<CottonCandy.DLL.Models.ReferalLinksViewModel> ReferalLinksViewModels { get; set; }
     }
 }

@@ -10,7 +10,7 @@ namespace CottonCandy.DLL
     {
         public static void UpdateDatabase(string userId)
         {
-            using(DashBoardClientBetaEntities db = new DashBoardClientBetaEntities())
+            using(StructDatabaseDevEntities db = new StructDatabaseDevEntities())
             {
                 var userAccount = (from user in db.AspNetUsers
                                    where user.Id == userId
@@ -19,7 +19,7 @@ namespace CottonCandy.DLL
 
             }
         }
-        private static DashBoardClientBetaEntities db = new DashBoardClientBetaEntities();
+        private static StructDatabaseDevEntities db = new StructDatabaseDevEntities();
        public static bool CheckForEmail(string email)
         {
             // bool isExist = db.AspNetUsers.Where(x => x.Email.ToLowerInvariant().Equals(email.ToLowerInvariant())) != null;
