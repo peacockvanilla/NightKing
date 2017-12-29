@@ -224,7 +224,7 @@ namespace MVC5_full_version.Controllers
             if (ModelState.IsValid)
             {
                 //string ipAddress = ClientIPAddress();
-                var user = new ApplicationUser { UserName = model.Username, Email = model.Email, ReferalCode = model.ReferalCode, UserCreatedDate = model.UserCreatedDate, UserIpAddress = model.IPAddress , FirstName = model.FirstName, LastName = model.LastName};
+                var user = new ApplicationUser { UserName = model.Username, Email = model.Email, ReferalCode = model.ReferalCode, UserCreatedDate = model.UserCreatedDate, UserIpAddress = model.IPAddress , FirstName = model.FirstName, LastName = model.LastName, UserImagePath = model.ImagePath};
                 
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)

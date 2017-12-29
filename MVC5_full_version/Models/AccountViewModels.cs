@@ -113,9 +113,11 @@ namespace MVC5_full_version.Models
 
         private DateTime _createdDate;
         private string _ipAddress;
+        private string _imgPath;
         public DateTime UserCreatedDate { get
             { return DateTime.Now; } set { _createdDate = value; } }
         public string IPAddress { get { return HttpContext.Current.Request.UserHostAddress; } set { _ipAddress = value; } }
+        public string ImagePath { get { return _imgPath; } set { _imgPath = value; } }
 
     }
 

@@ -75,6 +75,8 @@ namespace MVC5_full_version.Controllers
                     var fileName = Path.GetFileName(filebase.FileName);
                     var path = Path.Combine(Server.MapPath("~/Images/UserUploadedAvatars/"), fileName);
                     filebase.SaveAs(path);
+                    string userId = User.Identity.GetUserId();
+                    ProfileUpdate.UploadImagePathToDB(userId,path);
                     return Json("File Saved Successfully.");
                 }
                 else { return Json("No File Saved."); }

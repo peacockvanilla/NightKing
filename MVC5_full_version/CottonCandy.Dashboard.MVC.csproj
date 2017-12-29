@@ -189,6 +189,10 @@
     <Compile Include="Migrations\201712290157024_stru.Designer.cs">
       <DependentUpon>201712290157024_stru.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712290827487_stru1.cs" />
+    <Compile Include="Migrations\201712290827487_stru1.Designer.cs">
+      <DependentUpon>201712290827487_stru1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -524,6 +528,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201712290157024_stru.resx">
       <DependentUpon>201712290157024_stru.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712290827487_stru1.resx">
+      <DependentUpon>201712290827487_stru1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

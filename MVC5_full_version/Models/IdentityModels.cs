@@ -16,6 +16,7 @@ namespace MVC5_full_version.Models
         public string UserIpAddress { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public string UserImagePath { get; set; }
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {

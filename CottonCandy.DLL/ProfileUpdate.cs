@@ -10,6 +10,7 @@ namespace CottonCandy.DLL
     public static class ProfileUpdate
     {
         private static StructDatabaseDevEntities2 db = new StructDatabaseDevEntities2();
+        //Updates FirstName, LastName
         public static void UpdateDatabase(string userId,string Fn, string Ln )
         {
           
@@ -55,6 +56,13 @@ namespace CottonCandy.DLL
             var abc = db.AspNetUsers.Where(x => x.Id == userName).Select(x => new { x.FirstName, x.LastName, x.Email, x.UserName });
 
             return abc;
+        }
+
+        public static void UploadImagePathToDB(string userId,string imagePath)
+        {
+            AspNetUser user = db.AspNetUsers.SingleOrDefault(x => x.Id == userId);
+            user.UserImagePath = imagePath;
+            db.SaveChanges();
         }
     }
 }

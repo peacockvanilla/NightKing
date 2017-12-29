@@ -24,5 +24,6 @@ namespace CottonCandy.DLL
         public string ReferalCode { get; set; }
         public System.DateTime UserCreatedDate { get; set; }
         public string IPAddress { get; set; }
+        public string ImagePath { get; set; }
     }
 }
