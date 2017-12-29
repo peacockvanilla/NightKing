@@ -46,9 +46,9 @@ namespace CottonCandy.DLL
         {
             //var abc = (from users in db.AspNetUsers
             //           where users.Id == userName
-            //           select users.Email).FirstOrDefault();
+            //           select users).FirstOrDefault();
 
-            var abc = db.AspNetUsers.Where(x => x.Id == userName).SingleOrDefault();
+            var abc = db.AspNetUsers.Where(x => x.Id == userName).Select(x => new { x.FirstName, x.LastName, x.Email, x.UserName });
 
             return abc;
         }
