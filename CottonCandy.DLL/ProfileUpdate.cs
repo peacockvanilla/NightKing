@@ -10,16 +10,20 @@ namespace CottonCandy.DLL
     public static class ProfileUpdate
     {
         private static StructDatabaseDevEntities2 db = new StructDatabaseDevEntities2();
-        public static void UpdateDatabase(string userId)
+        public static void UpdateDatabase(string userId,string Fn, string Ln )
         {
-            using(StructDatabaseDevEntities2 db = new StructDatabaseDevEntities2())
-            {
-                var userAccount = (from user in db.AspNetUsers
-                                   where user.Id == userId
-                                   select user).FirstOrDefault();
+          
+                //var userAccount = (from user in db.AspNetUsers
+                //                   where user.Id == userId
+                //                   select user).FirstOrDefault();
+
+            AspNetUser user = db.AspNetUsers.SingleOrDefault(x => x.Id == userId);
+            user.FirstName = Fn;
+            user.LastName = Ln;
+            db.SaveChanges();
 
 
-            }
+            
         }
         
         public static bool CheckForEmail(string email)

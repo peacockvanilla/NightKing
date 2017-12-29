@@ -16,6 +16,7 @@ using CottonCandy.DLL;
 
 namespace MVC5_full_version.Controllers
 {
+    [Authorize]
     public class ProfileController : Controller
     {
         public ProfileController() { }
@@ -119,7 +120,7 @@ namespace MVC5_full_version.Controllers
            if(model != null)
             {
                 string userId = GetUserInfo();
-                ProfileUpdate.UpdateDatabase(userId);
+                ProfileUpdate.UpdateDatabase(userId,model.FirstName,model.LastName);
                 
             }
         }

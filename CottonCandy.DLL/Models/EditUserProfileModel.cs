@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CottonCandy.DLL.Models
 {
-    public class EditUserProfileModel
+    public class EditPersonalDetailsViewModel
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
