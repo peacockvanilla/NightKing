@@ -1,9 +1,9 @@
 ﻿@using Microsoft.AspNet.Identity
 
 <script>
-function myFunction() {
-    var copyText = document.getElementById("txtReferal");
-  copyText.select();
+    function copyToClipBoard() {
+    var textToCopy = document.getElementById("txtReferal");
+    textToCopy.select();
   document.execCommand("Copy");
  // alert("Copied the text: " + copyText.value);
 }
@@ -16,13 +16,24 @@ function myFunction() {
         </div>
         <div class="panel-body">
             <div class="row">
+                @*<div class="form-group">
                 <div class="col-md-4"><p>Refer Friends and Earn Bonus</p></div>
                 <div class="col-md-8">
                     
-                    <input type="text" id="txtReferal" value="http://localhost:61272/Account/Register?refCode=@User.Identity.GetUserName() "/>
-                    <input type="button" value="Copy" onclick="myFunction();"/>
+                    <input type="text" id="txtReferal" disabled="disabled"  value="http://localhost:61272/Account/Register?refCode=@User.Identity.GetUserName() "/>
+                    <input type="button" value="Copy" onclick="copyToClipBoard();"/>
                 </div>
-                
+               
+                </div>*@
+                <div class="form-group">
+                    <label class="col-sm-4 control-label">Refer and Earn Bonus</label>
+                    <div class="col-sm-6">
+                        <input type="text" id="txtReferal" disabled="disabled" value="http://localhost:61272/Account/Register?refCode=@User.Identity.GetUserName() "  class="form-control"/>
+                    </div>
+                    <div class="col-sm-2">
+                        <input type="button" value="Copy" onclick="copyToClipBoard();" />
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System.Web.Mvc;
+using System;
 
 namespace MVC5_full_version.Models
 {
@@ -11,6 +12,10 @@ namespace MVC5_full_version.Models
     public class ApplicationUser : IdentityUser
     {
         public string ReferalCode { get; set; }
+        public DateTime UserCreatedDate { get; set; }
+        public string UserIpAddress { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
@@ -26,13 +31,14 @@ namespace MVC5_full_version.Models
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
+            Database.SetInitializer<ApplicationDbContext>(new CreateDatabaseIfNotExists<ApplicationDbContext>());
         }
 
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
         }
-
+       
         public System.Data.Entity.DbSet<MVC5_full_version.Models.RegisterViewModel> RegisterViewModels { get; set; }
 
         public System.Data.Entity.DbSet<MVC5_full_version.Models.LoginViewModel> LoginViewModels { get; set; }

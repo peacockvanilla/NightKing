@@ -26,7 +26,25 @@
 
     });
 
+
+    $(document).ready(function () {
+        $.ajax({
+
+            type: 'POST',
+            url: '/Profile/GetUserDetails',
+            contentType: "application/json; charset=utf-8",
+            success: function (data) {
+                $("thirdTab").html(data);
+            },
+            error: function () {
+                alert('error');
+            }
+        });
+
+    });
 </script>
+
+
 
 
 @using (Html.BeginForm()) { 

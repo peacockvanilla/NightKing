@@ -3,14 +3,17 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NeuBoard | @ViewBag.Title</title>
+    <title>Structure | @ViewBag.Title</title>
 
     @if (IsSectionDefined("Styles"))
     {@RenderSection("Styles", required: false)}
                                               
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>  
-                                            
+
+                              
+  
+
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
@@ -53,4 +56,18 @@
     @Scripts.Render("~/bundles/app")
     @RenderSection("scripts", required: false)
 </body>
+
 </html>
+<link href="~/Scripts/fliptimer/fliptimer.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/fliptimer/jquery.fliptimer.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".countdown").flipTimer({
+            date: "2017/12/01 00:00:00",
+            timeZone: -5,	//Time zone of New York
+            past: true
+
+        });
+    });
+</script>

@@ -123,7 +123,13 @@ namespace MVC5_full_version.Controllers
                 
             }
         }
-
+        [HttpPost]
+        public JsonResult GetUserDetails()
+        {
+            string userId = GetUserInfo();
+            var result =  ProfileUpdate.GetUserDetailsToEdit(userId);
+            return Json(result, JsonRequestBehavior.AllowGet);
+        }
     }
 
 }

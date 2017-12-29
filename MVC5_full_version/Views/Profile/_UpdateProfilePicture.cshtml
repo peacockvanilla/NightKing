@@ -1,5 +1,38 @@
 ﻿
-@using (Html.BeginForm("UploadPicture", "Profile", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+<script type="text/javascript">
+    $(function () {
+        $('#btnUpdatePicture').click(function () {
+            var data = new FormData();
+            var files = $("#postFile").get(0).files;
+
+            if (files.length > 0) { data.append("HelpSectionImages", files[0]); }
+            else {
+                common.showNotification('warning', 'Please select file to upload.', 'top', 'right');
+                return false;
+            }
+            var extension = $("#postFile").val().split('.').pop().toUpperCase();
+            if (extension != "PNG" && extension != "JPG" && extension != "JPEG") {
+                common.showNotification('warning', 'Imvalid image file format.', 'top', 'right');
+                return false;
+            }
+            $.ajax({
+                url: '/Profile/UploadImage', type: "POST", processData: false,
+                data: data, dataType: 'json',
+                contentType: false,
+                success: function (response) {
+                    if (response != null || response != '')
+                        alert(response);
+                    $("#postFile").val('');
+                },
+                error: function (er) { }
+
+            });
+            return false;
+        });
+
+    });
+</script>
+@using (Html.BeginForm("UploadImage", "Profile", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
 {
 
     @Html.AntiForgeryToken()

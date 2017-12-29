@@ -50,70 +50,71 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AspNetRole.cs">
-      <DependentUpon>DashboardModel.tt</DependentUpon>
+      <DependentUpon>StruDbModel.tt</DependentUpon>
     </Compile>
     <Compile Include="AspNetUser.cs">
-      <DependentUpon>DashboardModel.tt</DependentUpon>
+      <DependentUpon>StruDbModel.tt</DependentUpon>
     </Compile>
     <Compile Include="AspNetUserClaim.cs">
-      <DependentUpon>DashboardModel.tt</DependentUpon>
+      <DependentUpon>StruDbModel.tt</DependentUpon>
     </Compile>
     <Compile Include="AspNetUserLogin.cs">
-      <DependentUpon>DashboardModel.tt</DependentUpon>
+      <DependentUpon>StruDbModel.tt</DependentUpon>
     </Compile>
     <Compile Include="C__MigrationHistory.cs">
-      <DependentUpon>DashboardModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DashboardModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DashboardModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DashboardModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DashboardModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DashboardModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DashboardModel.edmx</DependentUpon>
+      <DependentUpon>StruDbModel.tt</DependentUpon>
     </Compile>
     <Compile Include="LoginViewModel.cs">
-      <DependentUpon>DashboardModel.tt</DependentUpon>
+      <DependentUpon>StruDbModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\EditUserProfileModel.cs" />
     <Compile Include="Models\ReferalLinksViewModel.cs" />
     <Compile Include="ProfileUpdate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReferalLinks.cs" />
     <Compile Include="RegisterViewModel.cs">
-      <DependentUpon>DashboardModel.tt</DependentUpon>
+      <DependentUpon>StruDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StruDbModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StruDbModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StruDbModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StruDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StruDbModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StruDbModel.edmx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
-    <EntityDeploy Include="DashboardModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DashboardModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="DashboardModel.edmx.diagram">
-      <DependentUpon>DashboardModel.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
+    <EntityDeploy Include="StruDbModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>StruDbModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="StruDbModel.edmx.diagram">
+      <DependentUpon>StruDbModel.edmx</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DashboardModel.Context.tt">
+    <Content Include="StruDbModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DashboardModel.edmx</DependentUpon>
-      <LastGenOutput>DashboardModel.Context.cs</LastGenOutput>
+      <DependentUpon>StruDbModel.edmx</DependentUpon>
+      <LastGenOutput>StruDbModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="DashboardModel.tt">
+    <Content Include="StruDbModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DashboardModel.edmx</DependentUpon>
-      <LastGenOutput>DashboardModel.cs</LastGenOutput>
+      <DependentUpon>StruDbModel.edmx</DependentUpon>
+      <LastGenOutput>StruDbModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

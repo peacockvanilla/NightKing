@@ -22,6 +22,7 @@ namespace CottonCandy.DLL
         public string Password { get; set; }
         public string ConfirmPassword { get; set; }
         public string ReferalCode { get; set; }
-        public System.DateTime CreatedDate { get; set; }
+        public System.DateTime UserCreatedDate { get; set; }
+        public string IPAddress { get; set; }
     }
 }

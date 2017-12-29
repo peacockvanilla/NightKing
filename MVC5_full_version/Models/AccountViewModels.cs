@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Web;
 using System.Web.Mvc;
 
 namespace MVC5_full_version.Models
@@ -102,7 +103,7 @@ namespace MVC5_full_version.Models
         public string Password { get; set; }
 
         [DataType(DataType.Password)]
-        [Display(Name = "Confirm password")]
+        [Display(Name = "Re-type password")]
         [System.ComponentModel.DataAnnotations.Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
 
@@ -110,10 +111,12 @@ namespace MVC5_full_version.Models
         [Display(Name = "Referal Code")]
         public string ReferalCode { get; set; }
 
-       
+        private DateTime _createdDate;
+        private string _ipAddress;
+        public DateTime UserCreatedDate { get
+            { return DateTime.Now; } set { _createdDate = value; } }
+        public string IPAddress { get { return HttpContext.Current.Request.UserHostAddress; } set { _ipAddress = value; } }
 
-        public DateTime CreatedDate { get; set; }
-        
     }
 
     public class ResetPasswordViewModel

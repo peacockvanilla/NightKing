@@ -66,6 +66,10 @@ namespace MVC5_full_version.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
+        [CaptchaValidator(
+        PrivateKey = "6Ldk9TsUAAAAAJhC2DG4FR7oFAngfqZXCKezBvJI",
+        ErrorMessage = "Invalid input captcha.",
+        RequiredMessage = "The captcha field is required.")]
         public async Task<ActionResult> Login(Models.LoginViewModel model, string returnUrl)
         {
             if (!ModelState.IsValid)
@@ -219,8 +223,9 @@ namespace MVC5_full_version.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Username, Email = model.Email, ReferalCode = model.ReferalCode };
-                model.CreatedDate = DateTime.Now;
+                //string ipAddress = ClientIPAddress();
+                var user = new ApplicationUser { UserName = model.Username, Email = model.Email, ReferalCode = model.ReferalCode, UserCreatedDate = model.UserCreatedDate, UserIpAddress = model.IPAddress , FirstName = model.FirstName, LastName = model.LastName};
+                
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
@@ -240,6 +245,22 @@ namespace MVC5_full_version.Controllers
 
             // If we got this far, something failed, redisplay form
             return View(model);
+        }
+
+        //Not used
+        public string ClientIPAddress()
+        {
+            string ipAddress = Request.ServerVariables["HTTP_X_FORWARDED_FOR"];
+            if (string.IsNullOrEmpty(ipAddress))
+            {
+                ipAddress = Request.ServerVariables["REMOTE_ADDR"];
+                return ipAddress;
+            }
+            else
+            {
+                return null;
+            }
+            
         }
 
         //
@@ -268,6 +289,10 @@ namespace MVC5_full_version.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
+        [CaptchaValidator(
+        PrivateKey = "6Ldk9TsUAAAAAJhC2DG4FR7oFAngfqZXCKezBvJI",
+        ErrorMessage = "Invalid input captcha.",
+        RequiredMessage = "The captcha field is required.")]
         public async Task<ActionResult> ForgotPassword(ForgotPasswordViewModel model)
         {
             if (ModelState.IsValid)

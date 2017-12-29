@@ -1,7 +1,8 @@
 ﻿@using MVC5_full_version.Models
 @model LoginViewModel
+@using reCAPTCHA.MVC
 @{
-    Layout = "";
+    Layout = null;
     ViewBag.Title = "Log in";
 }
 
@@ -9,10 +10,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>StructurE | @ViewBag.Title</title>
-    @*<meta name="description" content="">
+    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>*@
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
 
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
@@ -21,7 +22,17 @@
     <!--[if lt IE 9]>
      @Scripts.Render("~/bundles/ie")
      <![endif]-->
+    <script>
+var verifyCallback = function (response) {
+    //alert("grecaptcha is ready!");
+};
 
+var expiredCallback = function () {
+  //  alert("grecaptcha is expired!");
+        };
+
+
+    </script>
 </head>
 
 <body>
@@ -55,25 +66,39 @@
                                     <div class="form-group">
                                         @Html.LabelFor(m => m.Username, new { @class = "col-md-2 control-label" })
                                         <div class="col-md-10">
-                                            @Html.TextBoxFor(m => m.Username, new { @class = "form-control" })
+                                            @Html.TextBoxFor(m => m.Username, new { @class = "form-control", placeholder = "Required" })
                                             @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
                                         <div class="col-md-10">
-                                            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                                            @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Required" })
                                             @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <div class="col-md-offset-2 col-md-10">
-                                            <div class="checkbox">
+                                        <div class="col-md-offset-2 col-md-4">
+                                            <div class="checkbox-inline">
                                                 @Html.CheckBoxFor(m => m.RememberMe)
                                                 @Html.LabelFor(m => m.RememberMe)
                                             </div>
                                         </div>
+                                        <div class="col-md-6">
+                                           
+                                        </div>
+                                            
                                     </div>
+                                    <div class="form-group">
+                                        <div class="col-md-offset-2 col-md-10">
+                                            @Html.Recaptcha()
+                                            @Html.ValidationMessage("ReCaptcha")
+                                        </div> 
+                                    </div>
+                                    @Html.Recaptcha(publicKey: "6Ldk9TsUAAAAAJ8EnHDu0VNR6lbJxU6ss_fVhUyf", theme: CaptchaTheme.Light, type: CaptchaType.Image,
+                                                          callback: "verifyCallback", expiredCallback: "expiredCallback")
+
+                            
                                     <div class="form-group">
                                         <div class="col-md-offset-2 col-md-10">
                                             <input type="submit" value="Log in" class="btn btn-default" />
@@ -88,7 +113,12 @@
                                         </p>
                                 }
                             </section>
-
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 </body>
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

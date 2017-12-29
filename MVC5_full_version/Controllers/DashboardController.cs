@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace MVC5_full_version.Controllers
 {
-    [Authorize]
+    //[Authorize]
     public class DashboardController : Controller
     {
         public ActionResult Index()

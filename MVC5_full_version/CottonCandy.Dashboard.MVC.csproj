@@ -185,9 +185,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\HTMLHelpers.cs" />
-    <Compile Include="Migrations\201712250530273_UpdateTable.cs" />
-    <Compile Include="Migrations\201712250530273_UpdateTable.Designer.cs">
-      <DependentUpon>201712250530273_UpdateTable.cs</DependentUpon>
+    <Compile Include="Migrations\201712290157024_stru.cs" />
+    <Compile Include="Migrations\201712290157024_stru.Designer.cs">
+      <DependentUpon>201712290157024_stru.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -259,6 +259,8 @@
     <Content Include="fonts\Simple-Line-Icons.woff" />
     <None Include="Properties\PublishProfiles\NeuBoard_full.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\fliptimer\fliptimer.css" />
+    <Content Include="Scripts\fliptimer\jquery.fliptimer.js" />
     <Content Include="Scripts\html5shiv.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -520,8 +522,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201712250530273_UpdateTable.resx">
-      <DependentUpon>201712250530273_UpdateTable.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201712290157024_stru.resx">
+      <DependentUpon>201712290157024_stru.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

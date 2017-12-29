@@ -7,13 +7,13 @@ namespace MVC5_full_version.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class UpdateTable : IMigrationMetadata
+    public sealed partial class stru : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(UpdateTable));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(stru));
         
         string IMigrationMetadata.Id
         {
-            get { return "201712250530273_UpdateTable"; }
+            get { return "201712290157024_stru"; }
         }
         
         string IMigrationMetadata.Source

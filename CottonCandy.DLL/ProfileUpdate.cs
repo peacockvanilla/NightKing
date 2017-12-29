@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CottonCandy.DLL.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,9 +9,10 @@ namespace CottonCandy.DLL
 {
     public static class ProfileUpdate
     {
+        private static StructDatabaseDevEntities2 db = new StructDatabaseDevEntities2();
         public static void UpdateDatabase(string userId)
         {
-            using(StructDatabaseDevEntities db = new StructDatabaseDevEntities())
+            using(StructDatabaseDevEntities2 db = new StructDatabaseDevEntities2())
             {
                 var userAccount = (from user in db.AspNetUsers
                                    where user.Id == userId
@@ -19,8 +21,8 @@ namespace CottonCandy.DLL
 
             }
         }
-        private static StructDatabaseDevEntities db = new StructDatabaseDevEntities();
-       public static bool CheckForEmail(string email)
+        
+        public static bool CheckForEmail(string email)
         {
             // bool isExist = db.AspNetUsers.Where(x => x.Email.ToLowerInvariant().Equals(email.ToLowerInvariant())) != null;
             var abc = (from users in db.AspNetUsers
@@ -38,6 +40,17 @@ namespace CottonCandy.DLL
                        select users.Id).FirstOrDefault();
 
             return abc != null ? true : false;
+        }
+
+        public static object GetUserDetailsToEdit(string userName)
+        {
+            //var abc = (from users in db.AspNetUsers
+            //           where users.Id == userName
+            //           select users.Email).FirstOrDefault();
+
+            var abc = db.AspNetUsers.Where(x => x.Id == userName).SingleOrDefault();
+
+            return abc;
         }
     }
 }

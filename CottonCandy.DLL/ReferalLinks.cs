@@ -12,7 +12,7 @@ namespace CottonCandy.DLL
         //Demo 
         public static object GetReferal(string refCode)
         {
-            StructDatabaseDevEntities db = new StructDatabaseDevEntities();
+            StructDatabaseDevEntities2 db = new StructDatabaseDevEntities2();
                 var firstLevel =  db.AspNetUsers.Where(x => x.ReferalCode == refCode).Select(y => new
                 ReferalLinksViewModel()
                 {
@@ -26,7 +26,7 @@ namespace CottonCandy.DLL
 
         public static List<ReferalLinksViewModel> GetFirstLevelReferal(string refCode)
         {
-            StructDatabaseDevEntities db = new StructDatabaseDevEntities();
+            StructDatabaseDevEntities2 db = new StructDatabaseDevEntities2();
             List<ReferalLinksViewModel> refLevel = db.AspNetUsers.Where(x => x.ReferalCode == refCode).Select(y => new
                 ReferalLinksViewModel()
             {
@@ -40,7 +40,7 @@ namespace CottonCandy.DLL
 
         public static List<ReferalLinksViewModel> GetSecondLevelReferal(string refCode1, string refCode2)
         {
-            StructDatabaseDevEntities db = new StructDatabaseDevEntities();
+            StructDatabaseDevEntities2 db = new StructDatabaseDevEntities2();
             List<ReferalLinksViewModel> refLevel = db.AspNetUsers.Where(x => x.ReferalCode == refCode1 || x.ReferalCode == refCode2).Select(y => new
                 ReferalLinksViewModel()
             {
@@ -54,7 +54,7 @@ namespace CottonCandy.DLL
 
         public static List<ReferalLinksViewModel> GetThirdLevelReferal(string refCode1,string refCode2, string refCode3)
         {
-            StructDatabaseDevEntities db = new StructDatabaseDevEntities();
+            StructDatabaseDevEntities2 db = new StructDatabaseDevEntities2();
             List<ReferalLinksViewModel> refLevel = db.AspNetUsers.Where(x => x.ReferalCode == refCode1 || x.ReferalCode == refCode2 || x.ReferalCode == refCode3).Select(y => new
                 ReferalLinksViewModel()
             {

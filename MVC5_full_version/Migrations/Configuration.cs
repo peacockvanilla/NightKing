@@ -9,7 +9,7 @@ namespace MVC5_full_version.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationsEnabled = false;
         }
 
         protected override void Seed(MVC5_full_version.Models.ApplicationDbContext context)
