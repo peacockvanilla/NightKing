@@ -177,6 +177,7 @@
     <Compile Include="Controllers\SampleController.cs" />
     <Compile Include="Controllers\SecurityController.cs" />
     <Compile Include="Controllers\STRUExchangeController.cs" />
+    <Compile Include="Controllers\SupportController.cs" />
     <Compile Include="Controllers\TablesController.cs" />
     <Compile Include="Controllers\UIElementsController.cs" />
     <Compile Include="Controllers\ValidationController.cs" />
@@ -510,6 +511,7 @@
     <Folder Include="Scripts\plugins\dropzone\css\stylus\" />
     <Folder Include="Scripts\plugins\dropzone\images\" />
     <Folder Include="Scripts\plugins\dropzone\js\" />
+    <Folder Include="Views\Support\" />
     <Folder Include="Views\Validation\" />
   </ItemGroup>
   <ItemGroup>
