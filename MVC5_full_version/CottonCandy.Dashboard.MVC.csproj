@@ -194,11 +194,20 @@
     <Compile Include="Migrations\201712290827487_stru1.Designer.cs">
       <DependentUpon>201712290827487_stru1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712300131073_stru2.cs" />
+    <Compile Include="Migrations\201712300131073_stru2.Designer.cs">
+      <DependentUpon>201712300131073_stru2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712300155041_stru3.cs" />
+    <Compile Include="Migrations\201712300155041_stru3.Designer.cs">
+      <DependentUpon>201712300155041_stru3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Profile\EditPersonalDetailsViewModel.cs" />
+    <Compile Include="Models\Support\ContactUsModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -476,6 +485,8 @@
     <Content Include="Views\Network\Index.cshtml" />
     <Content Include="Views\Network\Main.cshtml" />
     <Content Include="Views\Network\_ReferalLinksViewPartial.cshtml" />
+    <Content Include="Views\Support\Index.cshtml" />
+    <Content Include="Views\Support\_ContactUsViewPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -511,7 +522,6 @@
     <Folder Include="Scripts\plugins\dropzone\css\stylus\" />
     <Folder Include="Scripts\plugins\dropzone\images\" />
     <Folder Include="Scripts\plugins\dropzone\js\" />
-    <Folder Include="Views\Support\" />
     <Folder Include="Views\Validation\" />
   </ItemGroup>
   <ItemGroup>
@@ -533,6 +543,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712290827487_stru1.resx">
       <DependentUpon>201712290827487_stru1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712300131073_stru2.resx">
+      <DependentUpon>201712300131073_stru2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712300155041_stru3.resx">
+      <DependentUpon>201712300155041_stru3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

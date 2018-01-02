@@ -90,6 +90,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>StruDbModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Support.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
