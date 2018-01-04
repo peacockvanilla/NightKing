@@ -1,37 +1,11 @@
 ﻿@model IEnumerable<CottonCandy.DLL.Models.ReferalLinksViewModel>
 
-<script src="~/Scripts/jquery-1.11.1.min.js"></script>
-<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
-<script type="text/javascript">
-    $(document).ready(function () {
 
-        //GetSecondLevelReferal();
-
-    });
-    function GetSecondLevelReferal() {
-        $.ajax({
-            async: true,
-            cache: 'false',
-            url: '/Network/SecondLevelRef',
-            contentType: 'application/html; charset=utf-8',
-            type: 'GET',
-            dataType: 'html',
-            sucess: function (response, textStatus, jqxhr) {
-                console.log(response);
-                alert("second one");
-                $("#secondRef").html(response);
-            },
-            failure: function (data) {
-                alert('failed');
-            }
-        });
-    }
-        </script>
 <div class="row">
     <div class="col-md-12">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title">1st Level Referal</h3>
+                <h3 class="panel-title">2nd Level Referal</h3>
                 <div class="actions pull-right">
                     <i class="fa fa-expand"></i>
                     <i class="fa fa-chevron-down"></i>

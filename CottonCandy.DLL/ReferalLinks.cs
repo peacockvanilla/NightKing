@@ -38,33 +38,6 @@ namespace CottonCandy.DLL
             return refLevel;
         }
 
-        public static List<ReferalLinksViewModel> GetSecondLevelReferal(string refCode1, string refCode2)
-        {
-            StructDatabaseDevEntities2 db = new StructDatabaseDevEntities2();
-            List<ReferalLinksViewModel> refLevel = db.AspNetUsers.Where(x => x.ReferalCode == refCode1 || x.ReferalCode == refCode2).Select(y => new
-                ReferalLinksViewModel()
-            {
-                Email = y.Email,
-                Username = y.UserName
-
-            }).ToList();
-
-            return refLevel;
-        }
-
-        public static List<ReferalLinksViewModel> GetThirdLevelReferal(string refCode1,string refCode2, string refCode3)
-        {
-            StructDatabaseDevEntities2 db = new StructDatabaseDevEntities2();
-            List<ReferalLinksViewModel> refLevel = db.AspNetUsers.Where(x => x.ReferalCode == refCode1 || x.ReferalCode == refCode2 || x.ReferalCode == refCode3).Select(y => new
-                ReferalLinksViewModel()
-            {
-                Email = y.Email,
-                Username = y.UserName
-
-            }).ToList();
-
-            return refLevel;
-        }
-
+       
     }
 }

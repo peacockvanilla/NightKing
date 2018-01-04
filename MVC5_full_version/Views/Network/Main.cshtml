@@ -4,43 +4,40 @@
 }
 
 <script src="~/Scripts/jquery-1.11.1.min.js"></script>
-<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+
 <script type="text/javascript">
-    $(document).ready(function () {
-        $.ajax({
-            cache: 'false',
-            url: '/Network/FirstLevelRef',
-            contentType: 'application/html; charset=utf-8',
-            type: 'GET',
-            dataType: 'html',
-            success: function (response) {
-                console.log(response);
-                $("#firstRef").html(response);
-                alert('reached');
-                //  $('#example').dataTable();
-            },
-            failure: function (response) {
-                alert(response.responseText + d);
-            },
-            error: function (response) {
-                alert(response.responseText);
-            }
-        });
-
-        //    $.getJSON("/Network/FirstLevelRef",
-        //        function (json) {
-        //            var tr;
-        //            //Append each row to html table  
-        //            for (var i = 0; i < json.length; i++) {
-        //                tr = $('<tr/>');
-        //                tr.append("<td>" + json[i].Username + "</td>");
-        //                tr.append("<td>" + json[i].Email + "</td>");
-
-        //                $('table').append(tr);
-        //            }
-        //        });
-        //});  
+    $(document).ready(function (    ) {
+        
+        GetFirstLevelReferal();/*GetSecondLevelReferal()*/
+       
     });
+        function GetFirstLevelReferal() {
+            $.ajax({
+               
+                cache: 'false',
+                url: '/Network/FirstLevelRef',
+                contentType: 'application/html; charset=utf-8',
+                type: 'GET',
+                dataType: 'html',
+                success: function (response, textStatus, jqxhr) {
+                    //console.log(response);
+                    $("#firstRef").html(response);
+                    alert("first one");
+                    //alert('reached');
+                    //  $('#example').dataTable();
+
+                },
+                failure: function (response) {
+                    alert(response.responseText + d);
+                },
+                error: function (response) {
+                    alert(response.responseText);
+                }
+            });
+
+        }
+       
+    
 </script>
 
 <div class="pageheader">
@@ -56,7 +53,7 @@
 <section id="main-content" class="animated fadeInUp">
     <div class="row">
         <div class="col-md-12">
-            <div id="#firstRef">
+            <div id="firstRef">
              
             </div>
         </div>
@@ -64,13 +61,13 @@
     <div class="row">
         <div class="col-md-12">
             @*@Html.Partial("/Views/Network/_ReferalLinksViewPartial.cshtml")*@
-            <div id="#secondRef"></div>
+            <div id="secondRef"></div>
         </div>
     </div>
     <div class="row">
         <div class="col-md-12">
             @*@Html.Partial("/Views/Network/_ReferalLinksViewPartial.cshtml")*@
-            <div id="#thirdRef"></div>
+            <div id="thirdRef"></div>
         </div>
     </div>
 
@@ -86,11 +83,7 @@
     @Scripts.Render("~/plugins/dataTables")
     @Scripts.Render("~/plugins/dataTables-bootstrap")
 
-    <script>
-        $(document).ready(function () {
-         
-        });
-    </script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
 
 
 }

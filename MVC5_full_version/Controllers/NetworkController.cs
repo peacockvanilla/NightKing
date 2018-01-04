@@ -23,11 +23,21 @@ namespace MVC5_full_version.Controllers
             var user = User.Identity.GetUserName();
             List<ReferalLinksViewModel> res = ReferalLinks.GetFirstLevelReferal(user);
 
-            return Json(res, JsonRequestBehavior.AllowGet);
-           // return PartialView("/Views/Network/_ReferalLinksViewPartial.cshtml", res);
+            //return Json(res, JsonRequestBehavior.AllowGet);
+           return PartialView("/Views/Network/_ReferalLinksViewPartial.cshtml", res);
         }
 
-       
+        [HttpGet]
+        public ActionResult SecondLevelRef()
+        {
+            var user = "levelone"; //User.Identity.GetUserName();
+            List<ReferalLinksViewModel> res = ReferalLinks.GetFirstLevelReferal(user);
+
+            //return Json(res, JsonRequestBehavior.AllowGet);
+            return PartialView("/Views/Network/_ReferalLinksViewPartial1.cshtml", res);
+        }
+
+
 
     }
 }
