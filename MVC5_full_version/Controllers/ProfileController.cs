@@ -16,7 +16,7 @@ using CottonCandy.DLL;
 
 namespace MVC5_full_version.Controllers
 {
-    [Authorize]
+    
     public class ProfileController : Controller
     {
         public ProfileController() { }
