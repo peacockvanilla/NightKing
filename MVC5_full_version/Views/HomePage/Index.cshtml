@@ -1,0 +1,836 @@
+﻿@{ 
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- SITE TITLE -->
+    <title>Structure</title>
+    <!-- Latest Bootstrap min CSS -->
+    <link rel="stylesheet" href="~/Content/HomePage/bootstrap/css/bootstrap.min.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,600,500,700,800,900" rel="stylesheet" type="text/css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="~/Content/HomePage/fonts/font-awesome.min.css">
+    <!--Flex slider-->
+    <link rel="stylesheet" href="~/Content/HomePage/css/flexslider.css">
+    <!--- owl carousel Css-->
+    <link rel="stylesheet" href="~/Content/HomePage/owlcarousel/css/owl.carousel.css">
+    <link rel="stylesheet" href="~/Content/HomePage/owlcarousel/css/owl.theme.css">
+    <!--timeline-->
+    <!--<link href='http://fonts.googleapis.com/css?family=Droid+Serif|Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
+    <link href="timeline/css/reset.css" rel="stylesheet" />
+    <link href="timeline/css/style.css" rel="stylesheet" />
+    <script src="timeline/js/modernizr.js"></script>-->
+    <!--New TimeLine-->
+    <link href="~/Content/HomePage/NewTimeLine/css/default.min.css" rel="stylesheet" />
+    <link href="~/Content/HomePage/NewTimeLine/css/frst-timeline-style-3.css" rel="stylesheet" />
+    <!--<link href="NewTimeLine/demo/reset.css" rel="stylesheet" />-->
+    <!--plugin-->
+    <!--<script src="js/modernizr-2.8.3.min.js"></script>-->
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="~/Content/HomePage/css/style.css">
+
+    <!--fliptimer-->
+    <link href="~/Content/HomePage/fliptimer/fliptimer.css" rel="stylesheet" />
+    <script src="~/Content/HomePage/js/jquery-1.12.4.min.js"></script>
+    <script src="~/Content/HomePage/fliptimer/jquery.fliptimer.js"></script>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!--fonts-->
+    <!--<link href="fonts/icons/font-awesome.min.css" rel="stylesheet" />-->
+    <!--Table-->
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+
+    <!-- Style CSS -->
+    <!--<link rel="stylesheet" href="/Table/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="~/Content/HomePage/Table/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/Content/HomePage/Table/css/pe-icon-7-stroke.css">
+
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="~/Content/HomePage/Table/css/bee-style.css">
+
+</head>
+
+<body data-spy="scroll" data-offset="80">
+
+    <!-- START PRELOADER -->
+    <div class="preloader">
+        <div class="status">
+            <div class="status-mes"><h4>STRU</h4></div>
+        </div>
+    </div>
+    <!-- END PRELOADER -->
+    <!-- START NAVBAR -->
+    <div class="navbar navbar-default navbar-fixed-top menu-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="index.html" class="navbar-left"><img src="~/Content/HomePage/img/logo/Slogo.png" height="65" width="65" alt="logo"></a>
+            </div>
+            
+            <div class="navbar-collapse collapse">
+                <nav>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class="page-scroll" href="#home">Home</a></li>
+                        <li><a class="page-scroll" href="#icoCountdownPanel">ICO</a></li>
+                        <li><a class="page-scroll" href="#roadMap">Roadmap</a></li>
+                        <li><a class="page-scroll" href="#opportunities">Opportunities</a></li>
+                        <li><a class="page-scroll" href="#products">Products</a></li>
+                        <li><a class="page-scroll" href="#freeToken">Free Tokens</a></li>
+                        <li><a class="page-scroll" href="@Url.Action("Login","Account")">Login</a></li>
+                        <li><a class="page-scroll" href="#contact">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div><!--- END CONTAINER -->
+    </div>
+    <!-- END NAVBAR -->
+    <!-- START HOME -->
+    <section id="home" class="home-area">
+        <div id="home-slider" class="flexslider text-center loading">
+            <ul class="slides">
+                <li style="background: url('../../Content/HomePage/img/bg/bg1.png') no-repeat center center;">
+                    <div class="slider-info">
+                        <h1>Welcome to structure</h1>
+
+                        <br />
+                        <div class="col-md-2 col-sm-1">
+                            <a href="Files/Whitepaper.pdf" class="btn btn-block btn-home-bg page-scroll" target="_blank">Whitepaper</a>
+                        </div>
+                        <div class="col-md-2 col-sm-1">
+                            <a href="@Url.Action("Register","Account")" class="btn btn-block btn-home-bg page-scroll">Register  </a>
+                        </div>
+                    </div>
+
+                </li>
+                <li style="background: url('../../Content/HomePage/img/bg/bg2gray.png') no-repeat center center;">
+                    <div class="slider-info">
+                        <h1>Invest. Trade. Manage.</h1>
+                        <br />
+                        <br />
+                        <div class="col-md-2 col-sm-1">
+                            <a href="Files/Whitepaper.pdf" class="btn btn-block btn-home-bg page-scroll" target="_blank">Whitepaper</a>
+                        </div>
+                        <div class="col-md-2 col-sm-1">
+                            <a href="@Url.Action("Register","Account")" class="btn btn-block btn-home-bg page-scroll">Register  </a>
+                        </div>
+                    </div>
+
+                </li>
+
+            </ul>
+        </div>
+    </section>
+    <!-- END  HOME DESIGN -->
+    <!--ICO COuntdown-->
+
+    <section id="icoCountdownPanel" class="our_service">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="section-title">
+                        <h2>ICO COuntdown</h2>
+                        <span></span>
+                        <p><!--Structure Token is .--></p>
+                    </div>
+                </div><!--- END COL -->
+            </div><!--- END ROW -->
+        </div>
+
+    </section>
+    <section id="countdownTimer" class="buy_now">
+        <div class="countdown"></div>
+    </section>
+    <!--<section class="buy_now">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-offset-2 col-lg-7  text-center">
+
+
+                </div>
+            </div>
+        </div>
+    </section>-->
+    <section id="icoInfo" class="buy_now">
+        <div class="container-fluid">
+            <!--<div class="col-md-4">
+                <img src="img/ico/Coin details with token image.png" class="img-responsive" alt="" />
+            </div>-->
+            <div class="row">
+                <div class="col-md-offset-1 col-md-4">
+
+                    <!--<p style="color:white;">Coin Name:Structure</p>
+                    <p style="color:white;">Symbol:STRU</p>
+                    <p style="color:white;">Total Coin Supply: 9,000,000 (includes ICO, bonuses, contests and team allocation)</p>
+                    <p style="color:white;">Coins Available During ICO: 5,500,000 (including bonuses)</p>
+                    <p style="color:white;">Contests after ICO : 500,000 </p>
+                    <p style="color:white;">Team, Advisor and Further development:3,000,000</p>-->
+                    <table style="color:white;">
+                        <tr>
+                            <td>Coin Name</td>
+                            <td>Structure</td>
+                        </tr>
+                        <tr>
+                            <td>Symbol</td>
+                            <td>STRU</td>
+                        </tr>
+                        <tr>
+                            <td>Total Coin Supply</td>
+                            <td>9,000,000*</td>
+                        </tr>
+                        <tr>
+                            <td>Coins Available During ICO</td>
+                            <td>5,500,000**</td>
+                        </tr>
+                        <tr>
+                            <td>Contests after ICO</td>
+                            <td>500,000</td>
+                        </tr>
+                        <tr>
+                            <td>Team, Advisor and Further development</td>
+                            <td>3,000,000</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="col-md-offset-2 col-md-3">
+                    <!--<img src="img/ico/Round details with token image.png" class="img-responsive" alt="" />-->
+                    <table style="color:white;">
+                        <tr>
+                            <th>ICO Round</th>
+                            <th>Price (USD)</th>
+                            <th>STRU Available</th>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>$0.30</td>
+                            <td>1,000,000</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>$0.40</td>
+                            <td>1,000,000</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>$0.50</td>
+                            <td>1,500,000</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>$0.60</td>
+                            <td>1,500,000</td>
+                        </tr>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--End ICOCOUNTDOWN-->
+    <!--TIMELINE-->
+    <section id="roadMap" class="our_service">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="section-title">
+                        <h2>Roadmap</h2>
+                        <span></span>
+                        <p><!--Structure Token is .--></p>
+                    </div>
+                </div><!--- END COL -->
+            </div><!--- END ROW -->
+        </div>
+    </section>
+    <section class="buy_now">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="frst-container" data-animation-name="slideInUp">
+                        <!-- frst-left-align/frst-right-align/frst-alternate/frst-date-opposite-->
+                        <div class="frst-timeline frst-timeline-style-3 frst-alternate">
+                            <div class="frst-timeline-block frst-odd-item" data-animation="slideInUp">
+                                <div class="frst-timeline-img">
+                                    <span class="turqoise"></span>
+                                </div> <!-- frst-timeline-img -->
+                                <div class="frst-timeline-content effect1">
+                                    <div class="frst-timeline-content-inner turqoise">
+                                        <span class="frst-date">Q4 2017</span>
+                                        <span class="icon-section">
+                                            <i class="fa fa-star fa-2x" aria-hidden="true"></i>
+                                        </span>
+                                        <div class="text-section">
+                                            <h2>Development of STRUCTURE-BOT begins</h2>
+                                            <h2>Business Plan is developed</h2>
+                                            <h2>Team recruitment takes place</h2>
+                                        </div>
+                                    </div> <!-- frst-timeline-content-inner -->
+                                </div> <!-- frst-timeline-content -->
+                            </div> <!-- frst-timeline-block -->
+                            <div class="frst-timeline-block frst-even-item" data-animation="slideInUp">
+                                <div class="frst-timeline-img">
+                                    <span class="light-blue"></span>
+                                </div> <!-- frst-timeline-img -->
+                                <div class="frst-timeline-content effect2">
+                                    <div class="frst-timeline-content-inner light-blue">
+                                        <span class="frst-date">Q1 2018</span>
+                                        <span class="icon-section">
+                                            <i class="fa fa-star fa-2x" aria-hidden="true"></i>
+                                        </span>
+                                        <div class="text-section">
+                                            <h2>STRUCTURE BOT Testing</h2>
+                                            <h2>Business Plan modified</h2>
+                                            <h2>Website Launch</h2>
+                                        </div>
+                                    </div> <!-- frst-timeline-content-inner -->
+                                </div> <!-- frst-timeline-content -->
+                            </div> <!-- frst-timeline-block -->
+                            <div class="frst-timeline-block frst-odd-item" data-animation="slideInUp">
+                                <div class="frst-timeline-img">
+                                    <span class="blue"></span>
+                                </div> <!-- frst-timeline-img -->
+                                <div class="frst-timeline-content effect1">
+                                    <div class="frst-timeline-content-inner blue">
+                                        <span class="frst-date">Q2 2018</span>
+                                        <span class="icon-section">
+                                            <i class="fa fa-star fa-2x" aria-hidden="true"></i>
+                                        </span>
+                                        <div class="text-section">
+                                            <h2>Target price: 1STRU = $5 to $10 USD</h2>
+                                            <h2>STRUCTURE-BOT release</h2>
+                                            <h2>Internal Exchange begins</h2>
+                                            <h2>Listing on External Exchanges</h2>
+                                            <h2>Lending platforms are intorduced</h2>
+                                        </div>
+                                    </div> <!-- frst-timeline-content-inner -->
+                                </div> <!-- frst-timeline-content -->
+                            </div> <!-- frst-timeline-block -->
+                            <div class="frst-timeline-block frst-even-item" data-animation="slideInUp">
+                                <div class="frst-timeline-img">
+                                    <span class="violette"></span>
+                                </div> <!-- frst-timeline-img -->
+                                <div class="frst-timeline-content effect2">
+                                    <div class="frst-timeline-content-inner violette">
+                                        <span class="frst-date">Q3 2018</span>
+                                        <span class="icon-section">
+                                            <i class="fa fa-star fa-2x" aria-hidden="true"></i>
+                                        </span>
+                                        <div class="text-section">
+                                            <h2>Target price: 1STRU = $20 USD</h2>
+                                            <h2>Mobile App Development</h2>
+                                            <h2>Team Expansion</h2>
+                                            <h2>First Contest for STRU Holders</h2>
+
+                                        </div>
+                                    </div> <!-- frst-timeline-content-inner -->
+                                </div> <!-- frst-timeline-content -->
+                            </div> <!-- frst-timeline-block -->
+                            <div class="frst-timeline-block frst-odd-item" data-animation="slideInUp">
+                                <div class="frst-timeline-img">
+                                    <span class="dark-violette"></span>
+                                </div> <!-- frst-timeline-img -->
+                                <div class="frst-timeline-content effect1">
+                                    <div class="frst-timeline-content-inner dark-violette">
+                                        <span class="frst-date">Q4 2018</span>
+                                        <span class="icon-section">
+                                            <i class="fa fa-star fa-2x" aria-hidden="true"></i>
+                                        </span>
+                                        <div class="text-section">
+                                            <h2>Target price: 1STRU = $30 USD</h2>
+                                            <h2>Structure Mobile App release</h2>
+                                            <h2>Structure Portfolio Manager Enabled</h2>
+                                            <h2>Second Contest for STRU holders</h2>
+                                        </div>
+                                    </div> <!-- frst-timeline-content-inner -->
+                                </div> <!-- frst-timeline-content -->
+                            </div> <!-- frst-timeline-block -->
+                            <div class="frst-timeline-block frst-even-item" data-animation="slideInUp">
+                                <div class="frst-timeline-img">
+                                    <span class="turqoise"></span>
+                                </div> <!-- frst-timeline-img -->
+                                <div class="frst-timeline-content effect2">
+                                    <div class="frst-timeline-content-inner turqoise">
+                                        <span class="frst-date">Q1 2019</span>
+                                        <span class="icon-section">
+                                            <i class="fa fa-star fa-2x" aria-hidden="true"></i>
+                                        </span>
+                                        <div class="text-section">
+                                            <h2>Target price: 1STRU = $40 USD</h2>
+                                            <h2>Team Expansion</h2>
+                                            <h2>Structure-Marketplace development begins</h2>
+                                            <h2>Structure-Exchange development begins</h2>
+                                            <h2>Third contest for STRU holders</h2>
+                                        </div>
+                                    </div> <!-- frst-timeline-content-inner -->
+                                </div> <!-- frst-timeline-content -->
+                            </div> <!-- frst-timeline-block -->
+                            <div class="frst-timeline-block frst-odd-item" data-animation="slideInUp">
+                                <div class="frst-timeline-img">
+                                    <span class="light-blue"></span>
+                                </div> <!-- frst-timeline-img -->
+                                <div class="frst-timeline-content effect1">
+                                    <div class="frst-timeline-content-inner light-blue">
+                                        <span class="frst-date">Q2 2019</span>
+                                        <span class="icon-section">
+                                            <i class="fa fa-star fa-2x" aria-hidden="true"></i>
+                                        </span>
+                                        <div class="text-section">
+                                            <h2>Target Price: 1STRU = $50 USD</h2>
+                                            <h2>Structure Marketplace Launch</h2>
+                                            <h2>Structure Exchange Launch</h2>
+                                            <h2>App and Bot upgrade</h2>
+                                            <h2>Final contest for STRU holders</h2>
+                                        </div>
+                                    </div> <!-- frst-timeline-content-inner -->
+                                </div> <!-- frst-timeline-content -->
+                            </div> <!-- frst-timeline-block -->
+                            <div class="frst-timeline-block frst-even-item" data-animation="slideInUp">
+                                <div class="frst-timeline-img">
+                                    <span class="blue"></span>
+                                </div> <!-- frst-timeline-img -->
+                                <div class="frst-timeline-content effect2">
+                                    <div class="frst-timeline-content-inner blue">
+                                        <span class="frst-date">Q3 2019</span>
+                                        <span class="icon-section">
+                                            <i class="fa fa-star fa-2x" aria-hidden="true"></i>
+                                        </span>
+                                        <div class="text-section">
+                                            <h2>Continuous growth and development of the company</h2>
+                                            <h2>Implementing Blockchain n various industries</h2>
+                                            <h2>One stop for all users</h2>
+                                        </div>
+                                    </div> <!-- frst-timeline-content-inner -->
+                                </div> <!-- frst-timeline-content -->
+                            </div> <!-- frst-timeline-block -->
+
+                        </div> <!-- frst-timeline -->
+                    </div> .
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--END TIMELINE
+
+    <!-- OPPORTUNITIES -->
+
+    <section class="our_service" id="opportunities">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="section-title">
+                        <h2>OPPORTUNITIES</h2>
+                        <span></span>
+                        <p><!--Structure Token is .--></p>
+                    </div>
+                </div><!--- END COL -->
+            </div><!--- END ROW -->
+        </div>
+    </section>
+    <section id="opportunitiesMain" class="our_service">
+        <div class="container">
+            <!--<div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="section-title">
+                        <h2>Opportunities</h2>
+                        <span></span>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elitsed eiusmod tempor enim minim veniam quis notru exercit ation Lorem ipsum dolor sit amet.Veniam quis notru exercit.</p>
+                    </div>
+                </div>-->
+            <!--- END COL -->
+            <!--</div>--><!--- END ROW -->
+            <div class="row text-center">
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="serviceBox">
+                        <div class="service-icon">
+                            <i class="fa fa-exchange"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3>Trading</h3>
+                            <p>After the ICO, we will apply to list ourselves on several external exchanges. An Internal Exchange will also be created within our dashboard for users to buy and sell STRU tokens. In the future, BTC, ETH can also be traded. </p>
+                        </div>
+                        <div class="read">
+                            <!--<a href="#">More</a>-->
+                        </div>
+                    </div>
+                </div><!--- END COL -->
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="serviceBox">
+                        <div class="service-icon">
+                            <i class="fa fa-balance-scale"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3>Lending</h3>
+                            <p>Our lending program has the potential to give you gains of up to 40% per month. You will have the ability to withdraw the daily interest rates during the capital lock period. For detailed info, please refer to the <a href="Files/Whitepaper.pdf" target="_blank">WHITEPAPER.</a>  </p>
+                        </div>
+                        <div class="read">
+                            <!--<a href="#">More</a>-->
+                        </div>
+                    </div>
+                </div><!--- END COL -->
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="serviceBox">
+                        <div class="service-icon">
+                            <i class="fa fa-link"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3>Referral Program</h3>
+                            <p>
+                                Earn bonus  for who you refer through your referral code. We have 3 levels of bonuses:
+                               
+                                <ol>
+                                    <li>level 1 (5%)</li>
+                                    <li>Level 2 (3%)</li>
+                                    <li>Level 3 (1%)</li>
+                                </ol>
+
+                        </div>
+                        <div class="read">
+
+                        </div>
+                    </div>
+                </div><!--- END COL -->
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="serviceBox">
+                        <div class="service-icon">
+                            <i class="fa fa-share"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3>Structured Network Marketing</h3>
+                            <p>Spread News, Get Reward! For all you social birds out there, this is the right section for you. We will be rewarding the marketers an additional percentage of their purchased tokens whenever they share a Facebook or Twitter post, share YouTube videos, write blog articles etc. For more info, go to <a href="#freeToken">FREE TOKEN</a> </p>
+                        </div>
+                        <div class="read">
+                            <!--<a href="#">More</a>-->
+                        </div>
+                    </div>
+                </div><!--- END COL -->
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="serviceBox">
+                        <div class="service-icon">
+                            <i class="fa fa-gift"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3>Contests &amp; Giveaways</h3>
+                            <p>After the ICO ends, we have some unique contests for you that will run for over a year. These contests will take place every 3 months and will give everyone an opportunity to earn free tokens. Only people who are in possession of STRU tokens will be allowed to participate in these contests. For detailed info, please refer to the <a href="Files/Whitepaper.pdf" target="_blank">WHITEPAPER.</a> </p>
+                        </div>
+                        <div class="read">
+                            <!--<a href="#">More</a>-->
+                        </div>
+                    </div>
+                </div><!--- END COL -->
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="serviceBox">
+                        <div class="service-icon">
+                            <i class="fa fa-shopping-cart"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3>Buy &amp; Sell Used/New Products</h3>
+                            <p>Users will be able to make some extra digital cash for the goods they don’t use. Sell your old stuff by posting an ad on the Structure Marketplace (Coming soon…), and allow buyers to pay for the goods with the BTC/ETH/STRU coins. <br /> For detailed info, please refer to the <a href="Files/Whitepaper.pdf" target="_blank">WHITEPAPER.</a> </p>
+                        </div>
+                        <div class="read">
+                            <!--<a href="#">More</a>-->
+                        </div>
+                    </div>
+                </div><!--- END COL -->
+            </div><!--- END ROW -->
+        </div><!--- END CONTAINER -->
+    </section>
+    <!-- END OPPORTUNITIES -->
+    <!-- PROMOTION -->
+    <section class="buy_now" id="freeToken">
+        <div class="container text-center">
+            <h3 class="buy_now_title">Share us on social Media and Earn Token</h3>
+            <a href="#" class="btn btn-default btn-promotion-bg">Know More</a>
+        </div><!--- END CONTAINER -->
+    </section>
+    <!-- END PROMOTION -->
+    <!-- PRODUCTS -->
+    <section id="products" class="our_portfolio section-padding">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="section-title">
+                        <h2>Structure Products</h2>
+                        <span></span>
+                        <p>The products of Structure are developed aimed to introduce Blockchain in various industries</p>
+                    </div>
+                </div><!--- END COL -->
+            </div><!--- END ROW -->
+            <div class="row">
+                <div class="col-md-4 col-sm-4 col-xs-12 no-padding">
+                    <div class="box">
+                        <img src="~/Content/HomePage/img/Products/1-Structure mobile app.png" alt="">
+                        <div class="box-content">
+                            <h3 class="title">Structure mobile app</h3>
+                            <a href="#" class="read-more" data-toggle="modal" data-target="#struMobileAppModal">View More</a>
+                        </div>
+                    </div>
+                </div><!--- END COL -->
+                <div class="col-md-4 col-sm-4 col-xs-12 no-padding">
+                    <div class="box">
+                        <img src="~/Content/HomePage/img/Products/2-Structure Card.png" alt="">
+                        <div class="box-content">
+                            <h3 class="title">Structure Card</h3>
+                            <a href="#" class="read-more" data-toggle="modal" data-target="#struCardModal">View More</a>
+                        </div>
+                    </div>
+                </div><!--- END COL -->
+                <div class="col-md-4 col-sm-4 col-xs-12 no-padding">
+                    <div class="box">
+                        <img src="~/Content/HomePage/img/Products/3-Structure Exchange.png" alt="">
+                        <div class="box-content">
+                            <h3 class="title">Structure Exchange</h3>
+                            <a href="#" class="read-more" data-toggle="modal" data-target="#struExchange">View More</a>
+                        </div>
+                    </div>
+                </div><!--- END COL -->
+                <div class="col-md-4 col-sm-4 col-xs-12 no-padding">
+                    <div class="box">
+                        <img src="~/Content/HomePage/img/Products/4-Structure Marketplace.png" alt="">
+                        <div class="box-content">
+                            <h3 class="title">Structure Marketplace</h3>
+                            <a href="#" class="read-more" data-toggle="modal" data-target="#struMarketplace">View More</a>
+                        </div>
+                    </div>
+                </div><!--- END COL -->
+                <div class="col-md-4 col-sm-4 col-xs-12 no-padding">
+                    <div class="box">
+                        <img src="~/Content/HomePage/img/Products/5-Structure portfolio.png" alt="">
+                        <div class="box-content">
+                            <h3 class="title">Structure Portfolio</h3>
+                            <a href="#" class="read-more" data-toggle="modal" data-target="#struPortfolio">View More</a>
+                        </div>
+                    </div>
+                </div><!--- END COL -->
+                <div class="col-md-4 col-sm-4 col-xs-12 no-padding">
+                    <div class="box">
+                        <img src="~/Content/HomePage/img/Products/6-Structure-Bot pic.png" alt="">
+                        <div class="box-content">
+                            <h3 class="title">Structure-Bot</h3>
+                            <a href="#" class="read-more" data-toggle="modal" data-target="#struBot">View More</a>
+                        </div>
+                    </div>
+                </div><!--- END COL -->
+                <!-- Overlay Modal  -->
+                <div class="modal fade" id="struMobileAppModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title">Project Overview</h4>
+                            </div>
+                            <div class="modal-body">
+                                <img src="~/Content/HomePage/img/Products/1-Structure mobile app.png" class="img-responsive" alt="" />
+                                <p>A mobile app (IOS and Android) containing many features to make your lives easy will be released in the future. The STRU tokens will be used to unlock certain features within the app. </p>
+
+                            </div>
+                        </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+
+                <div class="modal fade" id="struCardModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title">Project Overview</h4>
+                            </div>
+                            <div class="modal-body">
+                                <img src="~/Content/HomePage/img/Products/2-Structure Card.png" class="img-responsive" alt="" />
+                                <p>A Structure card will be used to make payments at many stores all over the world. This card will be able to store a few coins such as BTC, STRU, ETH, LTC. This will be integrated along with the Structure Marketplace.</p>
+
+                            </div>
+                        </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+
+                <div class="modal fade" id="struExchange">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title">Project Overview</h4>
+                            </div>
+                            <div class="modal-body">
+                                <img src="~/Content/HomePage/img/Products/3-Structure Exchange.png" class="img-responsive" alt="" />
+                                <p>This will be the place where users can trade all currencies against each other. Users will pay a minimum fee(0.05%) on all trades. This will be a major source of revenue for building the business.</p>
+                                <!--<ul class="list-unstyled project-list" >
+                                    <li><label>Client : </label> Themeforest</li>
+                                    <li><label>Category :</label> Web Design</li>
+                                    <li><label>Date : </label> 12 September 2016</li>
+                                    <li><label>Project Url : </label> <a href="#">www.google.com</a></li>
+                                </ul>-->
+                            </div>
+                        </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+
+                <div class="modal fade" id="struMarketplace">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title">Structure Marketplace</h4>
+                            </div>
+                            <div class="modal-body">
+                                <img src="~/Content/HomePage/img/Products/4-Structure Marketplace.png" class="img-responsive" alt="" />
+                                <p>Through this medium, consumers will have an ability to buy and sell products via the internet using STRU tokens. So now, you can get your hands on those shoes, TV’s and various accessories using the STRU tokens.</p>
+
+                            </div>
+                        </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+
+                <div class="modal fade" id="struPortfolio">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title">Structure Portfolio</h4>
+                            </div>
+                            <div class="modal-body">
+                                <img src="~/Content/HomePage/img/Products/5-Structure portfolio.png" class="img-responsive" alt="" />
+                                <p>Manage all your coins using this cool feature from your phone. No need to scroll through 100’s of different websites to keep a tab of your accounts as it will be integrated in the structure mobile app itself</p>
+
+                            </div>
+                        </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+
+                <div class="modal fade" id="struBot">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title">STRU-BOT</h4>
+                            </div>
+                            <div class="modal-body">
+                                <img src="~/Content/HomePage/img/Products/6-Structure-Bot pic.png" class="img-responsive" alt="" />
+                                <p>Let the Bot do the job. The future is here. Whether, you are eating, sleeping, partying, or working, the Bot is going to be at work 24x7 to do all the investments which you can’t make time for. .</p>
+
+                            </div>
+                        </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+            </div><!--- END ROW -->
+
+        </div><!--- END CONTAINER -->
+    </section>
+    <!-- PRODUCTS END  -->
+    <!-- START COMPANY PARTNER LOGO  -->
+    <section class="partner-logo section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center" data-aos="fade-up">
+                    <div class="section-title">
+                        <h2>Targeted Exchange</h2>
+                        <span></span>
+                        <p>After the completion of the Structure ICO, we will apply to the following external exchanges as well as STRU Exchange</p>
+                    </div>
+                </div><!-- END COL -->
+            </div><!-- END ROW -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="partner  wow fadeInRight">
+                        <a href="#"><img src="~/Content/HomePage/img/Exchanges/1-Yobit.png" alt="image"></a>
+                        <a href="#"><img src="~/Content/HomePage/img/Exchanges/2-cryptopia.png" alt="image"></a>
+                        <a href="#"><img src="~/Content/HomePage/img/Exchanges/2ea90511-2a83-49ca-80a3-bce23b727855.jpg" alt="image"></a>
+                        <a href="#"><img src="~/Content/HomePage/img/Exchanges/3-coinexchange.png" alt="image"></a>
+                        <a href="#"><img src="~/Content/HomePage/img/Exchanges/5-bittrex.png" alt="image"></a>
+
+                    </div>
+                </div><!-- END COL  -->
+            </div><!--END  ROW  -->
+        </div><!-- END CONTAINER  -->
+    </section>
+    <!-- END COMPANY PARTNER LOGO -->
+    <!-- START FOOTER TOP -->
+    <section class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <div class="copyright">
+                        <p>Copyright &copy; 2017 Structure. All Rights Reserved.</p>
+                    </div><!--- END FOOTER COPYRIGHT -->
+                </div><!--- END COL -->
+                <div class="col-md-6 col-sm-6">
+                    <div class="footer_social">
+                        <ul>
+                            <li><a class="f_facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a class="f_twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a class="f_google" href="#"><i class="fa fa-google-plus"></i></a></li>
+
+                            <li><a class="f_telegram" href="#"><i class="fa fa-telegram"></i></a></li>
+                            <li><a class="f_youtube" href="#"><i class="fa fa-reddit"></i></a></li>
+
+                        </ul>
+                    </div>
+                </div><!--- END COL -->
+            </div><!--- END ROW -->
+        </div><!--- END CONTAINER -->
+    </section>
+    <!-- END FOOTER TOP -->
+    <!-- Latest jQuery -->
+    <script src="~/Content/HomePage/js/jquery-1.12.4.min.js"></script>
+    <!-- Latest compiled and minified Bootstrap -->
+    <script src="~/Content/HomePage/bootstrap/js/bootstrap.min.js"></script>
+    <!-- modernizer JS -->
+    <script src="~/Content/HomePage/js/modernizr-2.8.3.min.js"></script>
+
+    <!-- owl-carousel min js  -->
+    <script src="~/Content/HomePage/owlcarousel/js/owl.carousel.min.js"></script>
+
+
+    <!-- scripts js -->
+    <script src="~/Content/HomePage/js/scripts.js"></script>
+    <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
+    <script src="~/Content/HomePage/timeline/js/main.js"></script>
+    <script src="~/Content/HomePage/NewTimeLine/js/jquery-3.1.1.min.js"></script>
+    <script src="~/Content/HomePage/NewTimeLine/js/jquery-3.1.1.min.js"></script>
+    <script src="~/Content/HomePage/NewTimeLine/js/frst-timeline.min.js"></script>
+    <link href="~/Content/HomePage/fliptimer/fliptimer.css" rel="stylesheet" />
+    <script src="~/Content/HomePage/fliptimer/jquery.fliptimer.js"></script>
+    <script type="text/javascript">
+                $(document).ready(function () {
+
+                    //Countup timer
+                    $(".countdown").flipTimer({
+                        date: "2017/12/01 00:00:00",
+                        timeZone: -5,	//Time zone of New York
+                        past: true
+
+                    });
+
+                });
+    </script>
+
+    <!-- jquery flexslider min js -->
+    <script src="~/Content/HomePage/js/jquery.flexslider-min.js"></script>
+
+</body>
+</html>

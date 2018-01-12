@@ -48,6 +48,15 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=1.1.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Logging.1.1.2\lib\net451\Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=5.1.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Tokens.5.1.2\lib\net451\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="reCAPTCHA.MVC, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\reCAPTCH.MVC.1.0.1\lib\net45\reCAPTCHA.MVC.dll</HintPath>
     </Reference>
@@ -55,6 +64,10 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=5.1.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.5.1.2\lib\net451\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -103,6 +116,9 @@
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.Linq" />
+    <Reference Include="Twilio, Version=5.9.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Twilio.5.9.2\lib\net451\Twilio.dll</HintPath>
+    </Reference>
     <Reference Include="WebGrease">
       <Private>True</Private>
       <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
@@ -113,9 +129,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Core">
       <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.1.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
     </Reference>
@@ -167,6 +180,7 @@
     <Compile Include="Controllers\CSSAnimationsController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\FormsController.cs" />
+    <Compile Include="Controllers\HomePageController.cs" />
     <Compile Include="Controllers\ICOController.cs" />
     <Compile Include="Controllers\MailController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -218,6 +232,125 @@
     <Content Include="Content\clndr.css" />
     <Content Include="Content\dropzone.css" />
     <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\HomePage\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="Content\HomePage\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="Content\HomePage\bootstrap\css\bootstrap.css" />
+    <Content Include="Content\HomePage\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Content\HomePage\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\HomePage\bootstrap\js\bootstrap.js" />
+    <Content Include="Content\HomePage\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\HomePage\bootstrap\js\npm.js" />
+    <Content Include="Content\HomePage\css\flexslider.css" />
+    <Content Include="Content\HomePage\css\style.css" />
+    <Content Include="Content\HomePage\css\YTPlayer.css" />
+    <Content Include="Content\HomePage\fliptimer\fliptimer.css" />
+    <Content Include="Content\HomePage\fliptimer\jquery.fliptimer.js" />
+    <Content Include="Content\HomePage\fonts\font-awesome.css" />
+    <Content Include="Content\HomePage\fonts\font-awesome.min.css" />
+    <Content Include="Content\HomePage\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\HomePage\fonts\icons\font-awesome.min.css" />
+    <Content Include="Content\HomePage\img\bg\bg1.png" />
+    <Content Include="Content\HomePage\img\bg\bg2.jpg" />
+    <Content Include="Content\HomePage\img\bg\bg2gray.png" />
+    <Content Include="Content\HomePage\img\bg\Final-1.jpg" />
+    <Content Include="Content\HomePage\img\bg\slide1.jpg" />
+    <Content Include="Content\HomePage\img\bg\slide2.jpg" />
+    <Content Include="Content\HomePage\img\bg\slide3.jpg" />
+    <Content Include="Content\HomePage\img\Exchanges\1-Yobit.png" />
+    <Content Include="Content\HomePage\img\Exchanges\2-cryptopia.png" />
+    <Content Include="Content\HomePage\img\Exchanges\2ea90511-2a83-49ca-80a3-bce23b727855.jpg" />
+    <Content Include="Content\HomePage\img\Exchanges\3-coinexchange.png" />
+    <Content Include="Content\HomePage\img\Exchanges\5-bittrex.png" />
+    <Content Include="Content\HomePage\img\favicons\MOCKUP_18Dec17_1522_B41110.png" />
+    <Content Include="Content\HomePage\img\favicons\MOCKUP_18Dec17_1522_B41110_1 %281%29.jpg" />
+    <Content Include="Content\HomePage\img\favicons\MOCKUP_18Dec17_1522_B41110_1.jpg" />
+    <Content Include="Content\HomePage\img\ico\Coin details with token image.png" />
+    <Content Include="Content\HomePage\img\ico\Round details with token image.png" />
+    <Content Include="Content\HomePage\img\logo.png" />
+    <Content Include="Content\HomePage\img\logo\25px.png" />
+    <Content Include="Content\HomePage\img\logo\40px.png" />
+    <Content Include="Content\HomePage\img\logo\Slogo.png" />
+    <Content Include="Content\HomePage\img\map_pin.png" />
+    <Content Include="Content\HomePage\img\partner\1.jpg" />
+    <Content Include="Content\HomePage\img\partner\10.jpg" />
+    <Content Include="Content\HomePage\img\partner\2.jpg" />
+    <Content Include="Content\HomePage\img\partner\3.jpg" />
+    <Content Include="Content\HomePage\img\partner\4.jpg" />
+    <Content Include="Content\HomePage\img\partner\5.jpg" />
+    <Content Include="Content\HomePage\img\partner\6.jpg" />
+    <Content Include="Content\HomePage\img\partner\7.jpg" />
+    <Content Include="Content\HomePage\img\partner\8.jpg" />
+    <Content Include="Content\HomePage\img\partner\9.jpg" />
+    <Content Include="Content\HomePage\img\portfolio\1.jpg" />
+    <Content Include="Content\HomePage\img\portfolio\2.jpg" />
+    <Content Include="Content\HomePage\img\portfolio\3.jpg" />
+    <Content Include="Content\HomePage\img\portfolio\4.jpg" />
+    <Content Include="Content\HomePage\img\portfolio\5.jpg" />
+    <Content Include="Content\HomePage\img\portfolio\6.jpg" />
+    <Content Include="Content\HomePage\img\Products\1-Structure mobile app.png" />
+    <Content Include="Content\HomePage\img\Products\2-Structure Card.png" />
+    <Content Include="Content\HomePage\img\Products\3-Structure Exchange.png" />
+    <Content Include="Content\HomePage\img\Products\4-Structure Marketplace.png" />
+    <Content Include="Content\HomePage\img\Products\5-Structure portfolio.png" />
+    <Content Include="Content\HomePage\img\Products\6-Structure-Bot pic.png" />
+    <Content Include="Content\HomePage\img\team\team-1.jpg" />
+    <Content Include="Content\HomePage\img\team\team-2.jpg" />
+    <Content Include="Content\HomePage\img\team\team-3.jpg" />
+    <Content Include="Content\HomePage\img\team\team-4.jpg" />
+    <Content Include="Content\HomePage\img\testimonial\1.jpg" />
+    <Content Include="Content\HomePage\img\testimonial\2.jpg" />
+    <Content Include="Content\HomePage\img\testimonial\3.jpg" />
+    <Content Include="Content\HomePage\js\app.js" />
+    <Content Include="Content\HomePage\js\form-contact.js" />
+    <Content Include="Content\HomePage\js\jquery-1.12.4.min.js" />
+    <Content Include="Content\HomePage\js\jquery.flexslider-min.js" />
+    <Content Include="Content\HomePage\js\jquery.mb.YTPlayer.min.js" />
+    <Content Include="Content\HomePage\js\jquery.stellar.min.js" />
+    <Content Include="Content\HomePage\js\modernizr-2.8.3.min.js" />
+    <Content Include="Content\HomePage\js\particles.min.js" />
+    <Content Include="Content\HomePage\js\ripples-min.js" />
+    <Content Include="Content\HomePage\js\scripts.js" />
+    <Content Include="Content\HomePage\js\scrolltopcontrol.js" />
+    <Content Include="Content\HomePage\NewTimeLine\css\default.min.css" />
+    <Content Include="Content\HomePage\NewTimeLine\css\frst-timeline-style-3.css" />
+    <Content Include="Content\HomePage\NewTimeLine\demo\demo.css" />
+    <Content Include="Content\HomePage\NewTimeLine\demo\reset.css" />
+    <Content Include="Content\HomePage\NewTimeLine\js\frst-timeline.min.js" />
+    <Content Include="Content\HomePage\NewTimeLine\js\jquery-3.1.1.min.js" />
+    <Content Include="Content\HomePage\NewTimeLine\plugins\animate.css" />
+    <Content Include="Content\HomePage\NewTimeLine\plugins\animate.min.css" />
+    <Content Include="Content\HomePage\NewTimeLine\plugins\fonts\Simple-Line-Icons.svg" />
+    <Content Include="Content\HomePage\NewTimeLine\plugins\simple-line-icons.css" />
+    <Content Include="Content\HomePage\owlcarousel\css\owl.carousel.css" />
+    <Content Include="Content\HomePage\owlcarousel\css\owl.theme.css" />
+    <Content Include="Content\HomePage\owlcarousel\css\owl.transitions.css" />
+    <Content Include="Content\HomePage\owlcarousel\js\owl.carousel.js" />
+    <Content Include="Content\HomePage\owlcarousel\js\owl.carousel.min.js" />
+    <None Include="Content\HomePage\Scripts\jquery-3.2.1-vsdoc.js" />
+    <Content Include="Content\HomePage\Scripts\jquery-3.2.1.js" />
+    <Content Include="Content\HomePage\Scripts\jquery-3.2.1.min.js" />
+    <Content Include="Content\HomePage\Scripts\jquery-3.2.1.slim.js" />
+    <Content Include="Content\HomePage\Scripts\jquery-3.2.1.slim.min.js" />
+    <Content Include="Content\HomePage\Table\css\bee-style.css" />
+    <Content Include="Content\HomePage\Table\css\bootstrap.min.css" />
+    <Content Include="Content\HomePage\Table\css\font-awesome.min.css" />
+    <Content Include="Content\HomePage\Table\css\pe-icon-7-stroke.css" />
+    <Content Include="Content\HomePage\Table\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\HomePage\Table\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\HomePage\Table\fonts\Pe-icon-7-stroke.svg" />
+    <Content Include="Content\HomePage\Table\img\bg-img\bg-5.jpg" />
+    <Content Include="Content\HomePage\Table\img\bg-img\spa-1.jpg" />
+    <Content Include="Content\HomePage\Table\img\bg-img\spa-2.jpg" />
+    <Content Include="Content\HomePage\Table\img\bg-img\spa-3.jpg" />
+    <Content Include="Content\HomePage\Table\js\bootstrap.min.js" />
+    <Content Include="Content\HomePage\Table\js\jquery-2.2.4.min.js" />
+    <Content Include="Content\HomePage\timeline\css\reset.css" />
+    <Content Include="Content\HomePage\timeline\css\style.css" />
+    <Content Include="Content\HomePage\timeline\img\cd-icon-location.svg" />
+    <Content Include="Content\HomePage\timeline\img\cd-icon-movie.svg" />
+    <Content Include="Content\HomePage\timeline\img\cd-icon-picture.svg" />
+    <Content Include="Content\HomePage\timeline\js\main.js" />
+    <Content Include="Content\HomePage\timeline\js\modernizr.js" />
     <Content Include="Content\icheck\grey%402x.png" />
     <Content Include="Content\icheck\grey.css" />
     <Content Include="Content\icheck\grey.png" />
@@ -271,6 +404,45 @@
     <Content Include="fonts\Simple-Line-Icons.eot" />
     <Content Include="fonts\Simple-Line-Icons.ttf" />
     <Content Include="fonts\Simple-Line-Icons.woff" />
+    <Content Include="Content\HomePage\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="Content\HomePage\bootstrap\css\bootstrap-theme.min.css.map" />
+    <Content Include="Content\HomePage\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Content\HomePage\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Content\HomePage\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\HomePage\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\HomePage\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\HomePage\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\HomePage\Files\Whitepaper.pdf" />
+    <Content Include="Content\HomePage\fonts\font-awesome.css.map" />
+    <Content Include="Content\HomePage\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\HomePage\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\HomePage\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\HomePage\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\HomePage\fonts\FontAwesome.otf" />
+    <Content Include="Content\HomePage\NewTimeLine\plugins\fonts\Simple-Line-Icons.eot" />
+    <Content Include="Content\HomePage\NewTimeLine\plugins\fonts\Simple-Line-Icons.ttf" />
+    <Content Include="Content\HomePage\NewTimeLine\plugins\fonts\Simple-Line-Icons.woff" />
+    <Content Include="Content\HomePage\NewTimeLine\plugins\fonts\Simple-Line-Icons.woff2" />
+    <Content Include="Content\HomePage\Scripts\jquery-3.2.1.min.map" />
+    <Content Include="Content\HomePage\Scripts\jquery-3.2.1.slim.min.map" />
+    <Content Include="Content\HomePage\Table\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\HomePage\Table\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\HomePage\Table\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\HomePage\Table\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\HomePage\Table\fonts\FontAwesome.otf" />
+    <Content Include="Content\HomePage\Table\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\HomePage\Table\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\HomePage\Table\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\HomePage\Table\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\HomePage\Table\fonts\Pe-icon-7-stroke.eot" />
+    <Content Include="Content\HomePage\Table\fonts\Pe-icon-7-stroke.ttf" />
+    <Content Include="Content\HomePage\Table\fonts\Pe-icon-7-stroke.woff" />
+    <Content Include="Content\HomePage\timeline\img\.DS_Store" />
+    <Content Include="Content\HomePage\timeline\js\.DS_Store" />
+    <Content Include="Content\HomePage\timeline\partials\_layout.scss" />
+    <Content Include="Content\HomePage\timeline\partials\_mixins.scss" />
+    <Content Include="Content\HomePage\timeline\partials\_variables.scss" />
+    <Content Include="Content\HomePage\timeline\scss\style.scss" />
     <None Include="Properties\PublishProfiles\NeuBoard_full.pubxml" />
     <Content Include="Scripts\fliptimer\fliptimer.css" />
     <Content Include="Scripts\fliptimer\jquery.fliptimer.js" />
@@ -491,6 +663,7 @@
     <Content Include="Views\Support\Index.cshtml" />
     <Content Include="Views\Support\_ContactUsViewPartial.cshtml" />
     <Content Include="Views\Network\_ReferalLinksViewPartial1.cshtml" />
+    <Content Include="Views\HomePage\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

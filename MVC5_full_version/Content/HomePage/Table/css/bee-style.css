@@ -1,0 +1,724 @@
+  /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    :: Name: Bee - Responsive Pricing Tables
+    :: Author: Designing World
+    :: Author URL: https://codecanyon.net/user/designing-world
+    :: Version: 1.0.0
+    <<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+  
+  .box-shadow-with-bg-gray {
+      box-shadow: 3px 2px 3px rgba(0, 0, 0, 0.15);
+      border-radius: 4px;
+      background-color: #f6f6f6;
+      -webkit-transition-duration: 500ms;
+      transition-duration: 500ms;
+  }
+  
+  .box-shadow-with-bg-gray:hover {
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  .bg-gradients {
+      background: #DC2424;
+      background: -webkit-linear-gradient(to right, #4A569D, #DC2424);
+      background: linear-gradient(to right, #4A569D, #DC2424);
+      box-shadow: 3px 2px 3px rgba(0, 0, 0, 0.15);
+      border-radius: 4px;
+      -webkit-transition-duration: 500ms;
+      transition-duration: 500ms;
+  }
+  
+  .section_padding_100_70 {
+      padding-top: 100px;
+      padding-bottom: 70px;
+  }
+  
+  .section_padding_200 {
+      padding: 200px 0;
+  }
+  
+  .section_heading {
+      margin-bottom: 50px;
+      position: relative;
+      z-index: 1;
+      text-align: center;
+  }
+  
+  .section_heading>p {
+      margin-bottom: 5px;
+      max-width: 550px;
+      margin: 0 auto;
+  }
+  
+  .bee-btn {
+      border: 0 solid transparent;
+      box-shadow: 3px 2px 3px rgba(0, 0, 0, 0.15);
+      font-weight: 600;
+  }
+  
+  .bee-btn:hover {
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .buy_now_btn {
+      padding: 22px 0;
+  }
+  
+  .bee_welcome_area {
+      position: relative;
+      z-index: 1;
+      background-position: center center;
+      background-size: cover;
+  }
+  
+  .bee_welcome_area::before {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: "";
+      background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .welcome_content h2,
+  .welcome_content p {
+      color: #fff;
+  }
+  
+  .footer_area {
+      position: relative;
+      z-index: 1;
+  }
+  
+  .footer_bottom {
+      padding: 50px 0;
+      text-align: center;
+      background-color: #151515;
+  }
+  
+  .footer_bottom p {
+      margin: 0;
+      color: #fff;
+  }
+  
+  .footer_bottom p>a {
+      color: #fff;
+  }
+  
+  .footer_bottom p>i,
+  .footer_bottom p>a:hover {
+      color: #FF9800;
+  }
+  /* Price Plan Area CSS */
+  
+  body {
+      font-family: "Open Sans", sans-serif;
+      color: #151515;
+  }
+  
+  .single_price_plan {
+      margin-bottom: 30px;
+      text-align: center;
+  }
+  
+  .single_price_plan .price h4 {
+      font-size: 50px;
+      line-height: 1;
+      margin-bottom: 30px;
+  }
+  
+  .single_price_plan .description {
+      padding-bottom: 15px;
+  }
+  
+  .single_price_plan .price_plan_icon i {
+      font-size: 70px;
+      line-height: 1;
+      /*padding: 30px 0;*/
+  }
+  
+  .description>p {
+      font-size: 16px;
+      line-height: 1;
+      margin-bottom: 15px;
+  }
+  
+  .single_price_plan .button a {
+      margin-bottom: 30px;
+  }
+  
+  .single_price_plan.active {
+      background-color: #27ae60;
+      color: #fff;
+      -webkit-transform: scale(1.05);
+      transform: scale(1.05);
+  }
+  
+  .single_price_plan.active:hover {
+      box-shadow: none;
+  }
+  
+  .single_price_plan.active .price h4,
+  .single_price_plan.bg-gradients .price h4,
+  .single_price_plan.active .description p,
+  .single_price_plan.bg-gradients .description p,
+  .single_price_plan.active .price_plan_icon i,
+  .single_price_plan.bg-gradients .price_plan_icon i {
+      color: #fff;
+  }
+  
+  .bee-style-2 .title h4 {
+      margin-bottom: 0;
+      padding-top: 35px;
+  }
+  
+  .bee-style-2 .title h4 {
+      background-color: #27ae60;
+      border-radius: 4px 4px 0 0;
+      color: #fff;
+      line-height: 1;
+      margin-bottom: 0;
+      padding-bottom: 30px;
+      padding-top: 30px;
+  }
+  
+  .bee-style-2 .single_price_plan.active {
+      background-color: #f6f6f6;
+  }
+  
+  .bee-style-2 .single_price_plan.active .price h4,
+  .bee-style-2 .single_price_plan.bg-gradients .price h4,
+  .bee-style-2 .single_price_plan.active .description p,
+  .bee-style-2 .single_price_plan.bg-gradients .description p,
+  .bee-style-2 .single_price_plan.active .price_plan_icon i,
+  .bee-style-2 .single_price_plan.bg-gradients .price_plan_icon i {
+      color: #15151e;
+  }
+  
+  .bee-style-3 .title h4 {
+      background-color: transparent;
+      color: #27ae60;
+      line-height: 1;
+      margin-bottom: 10px;
+      padding-bottom: 0;
+      padding-top: 35px;
+      text-transform: uppercase;
+  }
+  
+  .bee-style-3 .title>p {
+      margin: 0;
+      line-height: 1
+  }
+  
+  .bee-style-3 .single_price_plan .price h4 {
+      background-color: #27ae60;
+      color: #fff;
+      font-size: 36px;
+      margin-bottom: 30px;
+      margin-top: 30px;
+      padding: 15px 0;
+  }
+  
+  .spa-version .single_price_plan {
+      border-radius: 6px;
+  }
+  
+  .spa-version .single_price_img:after {
+      background-color: rgba(233, 30, 99, 0);
+      border-radius: 6px 6px 0 0;
+      content: "";
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      -webkit-transition-duration: 500ms;
+      transition-duration: 500ms;
+      width: 100%;
+      z-index: 1;
+  }
+  
+  .spa-version .single_price_img {
+      position: relative;
+      z-index: 1;
+  }
+  
+  .spa-version .single_price_plan:hover .single_price_img:after {
+      background-color: rgba(233, 30, 99, 0.7);
+  }
+  
+  .spa-version .spa_package_title>h3 {
+      font-size: 30px;
+      margin: 30px 0;
+  }
+  
+  .spa-version .spa_price_description {
+      padding: 0 30px 15px;
+      text-align: left;
+  }
+  
+  .spa-version .single_price_description {
+      padding-bottom: 15px;
+  }
+  
+  .spa-version .single_price_description .spa_title {
+      font-size: 16px;
+      font-weight: 300;
+      margin-bottom: 5px;
+  }
+  
+  .spa-version .spa_duration_price {
+      position: relative;
+      z-index: 1;
+  }
+  
+  .spa-version .single_price_description .spa_duration_price:after {
+      border-bottom: 2px dotted #888;
+      bottom: 5px;
+      content: "";
+      height: 10px;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      z-index: -1;
+  }
+  
+  .spa-version .single_price_description .duration {
+      background-color: #f6f6f6;
+      display: inline-block;
+      font-size: 14px;
+      margin: 0;
+      padding-right: 3px;
+  }
+  
+  .spa-version .single_price_description .price {
+      background-color: #f6f6f6;
+      display: inline-block;
+      float: right;
+      margin: 0;
+      padding-left: 3px;
+  }
+  
+  .spa-version .single_price_plan .single_price_img img {
+      border-radius: 6px 6px 0 0;
+      max-width: 100%;
+  }
+  
+  .spa-version .single_price_plan .spa_package_title {
+      margin-bottom: 30px;
+      margin-top: 30px;
+  }
+  
+  .spa-version .label {
+      font-weight: 300;
+  }
+  /* Sweep To Right */
+  
+  .hvr-sweep-to-right {
+      display: inline-block;
+      vertical-align: middle;
+      -webkit-transform: perspective(1px) translateZ(0);
+      transform: perspective(1px) translateZ(0);
+      position: relative;
+      -webkit-transition-property: color;
+      transition-property: color;
+      -webkit-transition-duration: 0.3s;
+      transition-duration: 0.3s;
+      background: #fff;
+      color: #2c3e50;
+  }
+  
+  .hvr-sweep-to-right:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #27ae60;
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+      -webkit-transform-origin: 0 50%;
+      transform-origin: 0 50%;
+      -webkit-transition-property: transform;
+      -webkit-transition-property: -webkit-transform;
+      transition-property: -webkit-transform;
+      transition-property: transform;
+      transition-property: transform, -webkit-transform;
+      -webkit-transition-duration: 0.3s;
+      transition-duration: 0.3s;
+      -webkit-transition-timing-function: ease-out;
+      transition-timing-function: ease-out;
+      border-radius: inherit;
+  }
+  
+  .hvr-sweep-to-right:hover,
+  .hvr-sweep-to-right:focus,
+  .hvr-sweep-to-right:active {
+      color: #fff;
+  }
+  
+  .hvr-sweep-to-right:hover:before,
+  .hvr-sweep-to-right:focus:before,
+  .hvr-sweep-to-right:active:before {
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+  }
+  /* Shutter In Horizontal */
+  
+  .hvr-shutter-in-horizontal {
+      display: inline-block;
+      vertical-align: middle;
+      -webkit-transform: perspective(1px) translateZ(0);
+      transform: perspective(1px) translateZ(0);
+      position: relative;
+      background: #27ae60;
+      -webkit-transition-property: color;
+      transition-property: color;
+      -webkit-transition-duration: 0.3s;
+      transition-duration: 0.3s;
+      border-radius: inherit;
+      color: #2c3e50;
+  }
+  
+  .hvr-shutter-in-horizontal:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #fff;
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+      -webkit-transform-origin: 50%;
+      transform-origin: 50%;
+      -webkit-transition-property: transform;
+      -webkit-transition-property: -webkit-transform;
+      transition-property: -webkit-transform;
+      transition-property: transform;
+      transition-property: transform, -webkit-transform;
+      -webkit-transition-duration: 0.3s;
+      transition-duration: 0.3s;
+      -webkit-transition-timing-function: ease-out;
+      transition-timing-function: ease-out;
+      border-radius: inherit;
+  }
+  
+  .hvr-shutter-in-horizontal:hover,
+  .hvr-shutter-in-horizontal:focus,
+  .hvr-shutter-in-horizontal:active {
+      color: #fff;
+  }
+  
+  .hvr-shutter-in-horizontal:hover:before,
+  .hvr-shutter-in-horizontal:focus:before,
+  .hvr-shutter-in-horizontal:active:before {
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+  }
+  /* Color Picker CSS */
+  
+  .color_picker_area {
+      background-color: #fff;
+      border-radius: 0 0 4px;
+      box-shadow: 3px 2px 3px rgba(0, 0, 0, 0.15);
+      height: auto;
+      left: -250px;
+      padding: 30px 25px 30px 30px;
+      position: fixed;
+      top: 20%;
+      -webkit-transition-duration: 500ms;
+      transition-duration: 500ms;
+      width: 250px;
+      z-index: 9999;
+  }
+  
+  .color_picker_switcher {
+      background-color: #2c3e50;
+      border-radius: 0 4px 4px 0;
+      color: #fff;
+      cursor: pointer;
+      height: 50px;
+      position: absolute;
+      right: -50px;
+      text-align: center;
+      top: 0;
+      width: 50px;
+  }
+  
+  .color_picker_switcher i {
+      font-size: 24px;
+      line-height: 50px;
+      color: #fff;
+  }
+  
+  .color_picker_area.on {
+      left: 0;
+  }
+  
+  input[id*="cor"] {
+      display: none;
+  }
+  
+  input[id*="cor"]:checked+label:before {
+      content: '\f1fc';
+      display: block;
+      position: absolute;
+      font-family: 'FontAwesome';
+      top: 2px;
+      left: 4px;
+      font-size: 20px;
+      color: #fff;
+      font-weight: 400;
+  }
+  
+  label[class*="cor"] {
+      border: 1px solid transparent;
+      cursor: pointer;
+      display: inline-block;
+      height: 30px;
+      margin-right: 5px;
+      position: relative;
+      width: 30px;
+      -webkit-transition-duration: 500ms;
+      transition-duration: 500ms;
+  }
+  
+  label[class*="cor"]:hover {
+      border-color: #15151e;
+  }
+  
+  .cor1 {
+      background-color: #673AB7;
+  }
+  
+  .cor2 {
+      background-color: #2196F3;
+  }
+  
+  .cor3 {
+      background-color: #4CAF50;
+  }
+  
+  .cor4 {
+      background-color: #FF9800;
+  }
+  
+  .cor5 {
+      background-color: #795548;
+  }
+  
+  .cor6 {
+      background-color: #FF5722;
+  }
+  
+  .cor7 {
+      background-color: #F44336;
+  }
+  
+  .cor8 {
+      background-color: #00BCD4;
+  }
+  
+  .cor9 {
+      background-color: #009688
+  }
+  
+  .cor10 {
+      background-color: #E91E63;
+  }
+  /* Purple Skin Color CSS */
+  
+  .purple .single_price_plan.active,
+  .purple .bee-style-2 .title h4,
+  .purple .bee-style-3 .single_price_plan .price h4 {
+      background-color: #673AB7;
+  }
+  
+  .purple .bee-style-3 .title h4 {
+      color: #673AB7;
+  }
+  
+  .purple .hvr-sweep-to-right:before,
+  .purple .hvr-shutter-in-horizontal {
+      background: #673AB7;
+  }
+  
+  .purple .bee-style-2 .single_price_plan.active {
+      background-color: #f6f6f6;
+  }
+  /* Blue Skin Color CSS */
+  
+  .blue .single_price_plan.active,
+  .blue .bee-style-2 .title h4,
+  .blue .bee-style-3 .single_price_plan .price h4 {
+      background-color: #2196F3;
+  }
+  
+  .blue .bee-style-3 .title h4 {
+      color: #2196F3;
+  }
+  
+  .blue .hvr-sweep-to-right:before,
+  .blue .hvr-shutter-in-horizontal {
+      background: #2196F3;
+  }
+  
+  .blue .bee-style-2 .single_price_plan.active {
+      background-color: #f6f6f6;
+  }
+  /* orange Skin Color CSS */
+  
+  .orange .single_price_plan.active,
+  .orange .bee-style-2 .title h4,
+  .orange .bee-style-3 .single_price_plan .price h4 {
+      background-color: #ff9800;
+  }
+  
+  .orange .bee-style-3 .title h4 {
+      color: #ff9800;
+  }
+  
+  .orange .hvr-sweep-to-right:before,
+  .orange .hvr-shutter-in-horizontal {
+      background: #ff9800;
+  }
+  
+  .orange .bee-style-2 .single_price_plan.active {
+      background-color: #f6f6f6;
+  }
+  /* brown Skin Color CSS */
+  
+  .brown .single_price_plan.active,
+  .brown .bee-style-2 .title h4,
+  .brown .bee-style-3 .single_price_plan .price h4 {
+      background-color: #795548;
+  }
+  
+  .brown .bee-style-3 .title h4 {
+      color: #795548;
+  }
+  
+  .brown .hvr-sweep-to-right:before,
+  .brown .hvr-shutter-in-horizontal {
+      background: #795548;
+  }
+  
+  .brown .bee-style-2 .single_price_plan.active {
+      background-color: #f6f6f6;
+  }
+  /* deep-orange Skin Color CSS */
+  
+  .deep-orange .single_price_plan.active,
+  .deep-orange .bee-style-2 .title h4,
+  .deep-orange .bee-style-3 .single_price_plan .price h4 {
+      background-color: #FF5722;
+  }
+  
+  .deep-orange .bee-style-3 .title h4 {
+      color: #FF5722;
+  }
+  
+  .deep-orange .hvr-sweep-to-right:before,
+  .deep-orange .hvr-shutter-in-horizontal {
+      background: #FF5722;
+  }
+  
+  .deep-orange .bee-style-2 .single_price_plan.active {
+      background-color: #f6f6f6;
+  }
+  /* red Skin Color CSS */
+  
+  .red .single_price_plan.active,
+  .red .bee-style-2 .title h4,
+  .red .bee-style-3 .single_price_plan .price h4 {
+      background-color: #F44336;
+  }
+  
+  .red .bee-style-3 .title h4 {
+      color: #F44336;
+  }
+  
+  .red .hvr-sweep-to-right:before,
+  .red .hvr-shutter-in-horizontal {
+      background: #F44336;
+  }
+  
+  .red .bee-style-2 .single_price_plan.active {
+      background-color: #f6f6f6;
+  }
+  /* cyan Skin Color CSS */
+  
+  .cyan .single_price_plan.active,
+  .cyan .bee-style-2 .title h4,
+  .cyan .bee-style-3 .single_price_plan .price h4 {
+      background-color: #00BCD4;
+  }
+  
+  .cyan .bee-style-3 .title h4 {
+      color: #00BCD4;
+  }
+  
+  .cyan .hvr-sweep-to-right:before,
+  .cyan .hvr-shutter-in-horizontal {
+      background: #00BCD4;
+  }
+  
+  .cyan .bee-style-2 .single_price_plan.active {
+      background-color: #f6f6f6;
+  }
+  /* teal Skin Color CSS */
+  
+  .teal .single_price_plan.active,
+  .teal .bee-style-2 .title h4,
+  .teal .bee-style-3 .single_price_plan .price h4 {
+      background-color: #009688;
+  }
+  
+  .teal .bee-style-3 .title h4 {
+      color: #009688;
+  }
+  
+  .teal .hvr-sweep-to-right:before,
+  .teal .hvr-shutter-in-horizontal {
+      background: #009688;
+  }
+  
+  .teal .bee-style-2 .single_price_plan.active {
+      background-color: #f6f6f6;
+  }
+  /* pink Skin Color CSS */
+  
+  .pink .single_price_plan.active,
+  .pink .bee-style-2 .title h4,
+  .pink .bee-style-3 .single_price_plan .price h4 {
+      background-color: #E91E63;
+  }
+  
+  .pink .bee-style-3 .title h4 {
+      color: #E91E63;
+  }
+  
+  .pink .hvr-sweep-to-right:before,
+  .pink .hvr-shutter-in-horizontal {
+      background: #E91E63;
+  }
+  
+  .pink .bee-style-2 .single_price_plan.active {
+      background-color: #f6f6f6;
+  }
+  
+  @media only screen and (min-width: 480px) and (max-width: 575px) {
+      .container {
+          width: 450px;
+      }
+  }
+  
+  @media only screen and (min-width: 576px) and (max-width: 767px) {
+      .container {
+          width: 550px;
+      }
+  }
