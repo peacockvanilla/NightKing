@@ -14,6 +14,9 @@ using MVC5_full_version.Models;
 using System.Net.Mail;
 using System.Net.Mime;
 using System.Configuration;
+using Twilio;
+using Twilio.Rest.Api.V2010.Account;
+using Twilio.Types;
 
 namespace MVC5_full_version
 {
@@ -76,7 +79,27 @@ namespace MVC5_full_version
         public Task SendAsync(IdentityMessage message)
         {
             // Plug in your SMS service here to send a text message.
+            //
+            string accountSid = ConfigurationManager.AppSettings["SMSAccountIdentification"];
+
+            string authToken = ConfigurationManager.AppSettings["SMSAccountPassword"];
+
+            string fromNumber = ConfigurationManager.AppSettings["SMSAccountFrom"];
+
+            // Initialize the Twilio client
+
+            TwilioClient.Init(accountSid, authToken);
+
+            MessageResource result = MessageResource.Create(
+
+                    from: new PhoneNumber(fromNumber),
+
+                    to: new PhoneNumber(message.Destination),
+
+                    body: message.Body);
+
             return Task.FromResult(0);
+
         }
     }
 

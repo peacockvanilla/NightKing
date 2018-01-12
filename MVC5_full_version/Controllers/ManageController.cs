@@ -125,7 +125,7 @@ namespace MVC5_full_version.Controllers
 
         //
         // POST: /Manage/EnableTwoFactorAuthentication
-        [HttpPost]
+        [HttpPost,ValidateAntiForgeryToken]
         public async Task<ActionResult> EnableTwoFactorAuthentication()
         {
             await UserManager.SetTwoFactorEnabledAsync(User.Identity.GetUserId(), true);
@@ -139,7 +139,7 @@ namespace MVC5_full_version.Controllers
 
         //
         // POST: /Manage/DisableTwoFactorAuthentication
-        [HttpPost]
+        [HttpPost, ValidateAntiForgeryToken]
         public async Task<ActionResult> DisableTwoFactorAuthentication()
         {
             await UserManager.SetTwoFactorEnabledAsync(User.Identity.GetUserId(), false);
