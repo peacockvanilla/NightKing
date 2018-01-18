@@ -13,10 +13,10 @@ namespace CottonCandy.DLL
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class StructDatabaseDevEntities2 : DbContext
+    public partial class demoDBEntities : DbContext
     {
-        public StructDatabaseDevEntities2()
-            : base("name=StructDatabaseDevEntities2")
+        public demoDBEntities()
+            : base("name=demoDBEntities")
         {
         }
     

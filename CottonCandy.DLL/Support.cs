@@ -8,7 +8,7 @@ namespace CottonCandy.DLL
 {
     public class Support
     {
-        private static StructDatabaseDevEntities2 db = new StructDatabaseDevEntities2();
+       // private static StructDatabaseDevEntities2 db = new StructDatabaseDevEntities2();
 
         public static void ContactUsDataInDB()
         {

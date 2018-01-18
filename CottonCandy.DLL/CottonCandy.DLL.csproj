@@ -50,22 +50,37 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AspNetRole.cs">
-      <DependentUpon>StruDbModel.tt</DependentUpon>
+      <DependentUpon>DemoModel.tt</DependentUpon>
     </Compile>
     <Compile Include="AspNetUser.cs">
-      <DependentUpon>StruDbModel.tt</DependentUpon>
+      <DependentUpon>DemoModel.tt</DependentUpon>
     </Compile>
     <Compile Include="AspNetUserClaim.cs">
-      <DependentUpon>StruDbModel.tt</DependentUpon>
+      <DependentUpon>DemoModel.tt</DependentUpon>
     </Compile>
     <Compile Include="AspNetUserLogin.cs">
-      <DependentUpon>StruDbModel.tt</DependentUpon>
+      <DependentUpon>DemoModel.tt</DependentUpon>
     </Compile>
     <Compile Include="C__MigrationHistory.cs">
-      <DependentUpon>StruDbModel.tt</DependentUpon>
+      <DependentUpon>DemoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DemoModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DemoModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DemoModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DemoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DemoModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DemoModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="LoginViewModel.cs">
-      <DependentUpon>StruDbModel.tt</DependentUpon>
+      <DependentUpon>DemoModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\EditUserProfileModel.cs" />
     <Compile Include="Models\ReferalLinksViewModel.cs" />
@@ -73,49 +88,36 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReferalLinks.cs" />
     <Compile Include="RegisterViewModel.cs">
-      <DependentUpon>StruDbModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="StruDbModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>StruDbModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="StruDbModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>StruDbModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="StruDbModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>StruDbModel.edmx</DependentUpon>
+      <DependentUpon>DemoModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Support.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.Config" />
-    <None Include="packages.config" />
-    <EntityDeploy Include="StruDbModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>StruDbModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="StruDbModel.edmx.diagram">
-      <DependentUpon>StruDbModel.edmx</DependentUpon>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
     </None>
+    <EntityDeploy Include="DemoModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DemoModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DemoModel.edmx.diagram">
+      <DependentUpon>DemoModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="StruDbModel.Context.tt">
+    <Content Include="DemoModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>StruDbModel.edmx</DependentUpon>
-      <LastGenOutput>StruDbModel.Context.cs</LastGenOutput>
+      <DependentUpon>DemoModel.edmx</DependentUpon>
+      <LastGenOutput>DemoModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="StruDbModel.tt">
+    <Content Include="DemoModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>StruDbModel.edmx</DependentUpon>
-      <LastGenOutput>StruDbModel.cs</LastGenOutput>
+      <DependentUpon>DemoModel.edmx</DependentUpon>
+      <LastGenOutput>DemoModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

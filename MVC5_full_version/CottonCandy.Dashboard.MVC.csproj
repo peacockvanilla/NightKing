@@ -22,6 +22,7 @@
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
     <TargetFrameworkProfile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -200,23 +201,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\HTMLHelpers.cs" />
-    <Compile Include="Migrations\201712290157024_stru.cs" />
-    <Compile Include="Migrations\201712290157024_stru.Designer.cs">
-      <DependentUpon>201712290157024_stru.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712290827487_stru1.cs" />
-    <Compile Include="Migrations\201712290827487_stru1.Designer.cs">
-      <DependentUpon>201712290827487_stru1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712300131073_stru2.cs" />
-    <Compile Include="Migrations\201712300131073_stru2.Designer.cs">
-      <DependentUpon>201712300131073_stru2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712300155041_stru3.cs" />
-    <Compile Include="Migrations\201712300155041_stru3.Designer.cs">
-      <DependentUpon>201712300155041_stru3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -443,6 +427,8 @@
     <Content Include="Content\HomePage\timeline\partials\_mixins.scss" />
     <Content Include="Content\HomePage\timeline\partials\_variables.scss" />
     <Content Include="Content\HomePage\timeline\scss\style.scss" />
+    <None Include="Properties\PublishProfiles\myTokendemo - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\myTokendemo - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\NeuBoard_full.pubxml" />
     <Content Include="Scripts\fliptimer\fliptimer.css" />
     <Content Include="Scripts\fliptimer\jquery.fliptimer.js" />
@@ -713,20 +699,6 @@
       <Project>{a9498699-a3d7-40b1-a5c1-3acc8e9d3c70}</Project>
       <Name>CottonCandy.DLL</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201712290157024_stru.resx">
-      <DependentUpon>201712290157024_stru.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712290827487_stru1.resx">
-      <DependentUpon>201712290827487_stru1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712300131073_stru2.resx">
-      <DependentUpon>201712300131073_stru2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712300155041_stru3.resx">
-      <DependentUpon>201712300155041_stru3.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

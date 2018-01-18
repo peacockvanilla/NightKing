@@ -9,7 +9,8 @@ namespace CottonCandy.DLL
 {
     public static class ProfileUpdate
     {
-        private static StructDatabaseDevEntities2 db = new StructDatabaseDevEntities2();
+        //private static StructDatabaseDevEntities2 db = new StructDatabaseDevEntities2();
+        private static demoDBEntities db = new demoDBEntities();
         //Updates FirstName, LastName
         public static void UpdateDatabase(string userId,string Fn, string Ln )
         {
